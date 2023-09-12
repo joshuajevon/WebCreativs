@@ -9,7 +9,23 @@ module.exports = {
         "./public/js/**/*.js",
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                libre: ["Libre Baskerville", "serif"],
+                montserrat: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+                custom: {
+                    // custom-[name] => custom-dark-green
+                    "dark-green": "#5f6342",
+                    "light-green": "#6f7748",
+                    "lighter-green": "#9daa76",
+                    "lightest-green": "#c7cda7",
+                    "dark-gray": "#2D2D2D",
+                    "off-white": "#ecede7",
+                },
+            },
+        },
     },
     plugins: [],
 };
