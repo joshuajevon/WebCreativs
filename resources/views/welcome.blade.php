@@ -70,17 +70,17 @@
                 <img src="{{ asset('assets/hero/person-1.svg') }}?t={{ env('VERSION_TIME') }}" alt="person-1" class="w-[28rem]">
             </div>
 
-            <div class="flex flex-col gap-12 md:gap-10 xl:gap-8 justify-center items-center">
+            <div class="flex flex-col gap-8 justify-center items-center">
                 <div class="flex flex-col justify-center items-center gap-2">
                     <img src="{{ asset('assets/logo/logo-icon-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="person-1" class="w-16 md:w-18 xl:w-20">
-                    <p class="text-xl md:text-2xl xl:text-3xl font-libre text-center leading-tight text-custom-dark-blue">Create With Us</p>
+                    <p class="text-lg sm:text-xl md:text-2xl xl:text-3xl font-libre text-center leading-tight sm:leading-tight md:leading-tight xl:leading-tight text-custom-dark-blue">Create With Us</p>
                 </div>
 
-                <h1 class="text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">
                     Crafting Stunning Websites for Your Business
                 </h1>
 
-                <p class="font-montserrat font-medium text-center text-base md:text-lg xl:text-xl leading-loose md:leading-loose xl:leading-loose  text-custom-dark-blue">Together, let's turn your website dreams into a reality, say "<span class="font-bold underline">Yes</span>" to extraordinary design with us!</p>
+                <p class="font-montserrat font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose  text-custom-dark-blue">Together, let's turn your website dreams into a reality, say "<span class="font-bold underline">Yes</span>" to extraordinary design with us!</p>
 
             </div>
 
@@ -90,18 +90,18 @@
         </div>
 
         <div class="flex justify-center items-center w-full z-20">
-            <ul class="flex justify-center flex-wrap items-center w-full list-disc text-lg md:text-xl xl:text-2xl font-libre text-center leading-tight text-custom-dark-blue gap-x-8 md:gap-x-16 xl:gap-x-24 gap-y-6">
+            <ul class="flex justify-center flex-wrap items-center w-full list-disc text-base sm:text-lg md:text-xl xl:text-2xl font-libre text-center text-custom-dark-blue gap-x-8 md:gap-x-16 xl:gap-x-24 gap-y-6">
                 <li>Personal Website</li>
                 <li>E-Learning</li>
                 <li>Company Profile</li>
                 <li>Landing Page</li>
                 <li>E-Commerce</li>
-                <li>Many More++</li>
+                <li>Many More ++</li>
             </ul>
         </div>
 
         <div class="z-20">
-            <button class="bg-custom-dark-green text-custom-off-white hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/20%)_0_0)] rounded-full py-3 md:py-4 xl:py-5 px-10 w-full font-montserrat text-lg md:text-xl xl:text-2xl font-medium">Let's Talk</button>
+            <button class="bg-custom-dark-green text-custom-off-white hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/20%)_0_0)] rounded-full py-3 md:py-4 xl:py-5 px-10 w-full font-montserrat text-base sm:text-lg md:text-xl xl:text-2xl font-medium">Let's Talk</button>
         </div>
     </div>
 
@@ -114,11 +114,11 @@
             </div>
             <div class="flex flex-col items-start gap-8 z-20 flex-1">
                 <span class="relative">
-                    <h1 class="text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">About Us.</h1>
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">About Us.</h1>
                     <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 bottom-0"></span>
                 </span>
 
-                <p class="font-montserrat font-medium text-base md:text-lg xl:text-xl leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">Welcome to <span class="font-bold text-custom-dark-green">WebCreativs</span>, where <span class="font-bold text-custom-dark-green">passion</span> and <span class="font-bold text-custom-dark-green">innovation</span> converge. Founded in 2023 by a group of driven college students, we embody the creative force that brings your dream websites to life. Despite our academic pursuits, we've quickly garnered a reputation for <span class="font-bold text-custom-dark-green">excellence</span>, consistently offering top-tier, <span class="font-bold text-custom-dark-green">professional web solutions</span> at prices that simply make sense.
+                <p class="font-montserrat font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">Welcome to <span class="font-bold text-custom-dark-green">WebCreativs</span>, where <span class="font-bold text-custom-dark-green">passion</span> and <span class="font-bold text-custom-dark-green">innovation</span> converge. Founded in 2023 by a group of driven college students, we embody the creative force that brings your dream websites to life. Despite our academic pursuits, we've quickly garnered a reputation for <span class="font-bold text-custom-dark-green">excellence</span>, consistently offering top-tier, <span class="font-bold text-custom-dark-green">professional web solutions</span> at prices that simply make sense.
 
                     <br><br>
                     At <span class="font-bold text-custom-dark-green">WebCreativs</span>, your satisfaction is our paramount concern. With a user-centric and <span class="font-bold text-custom-dark-green">professional approach</span>, our dedicated team of college students is resolutely committed to delivering <span class="font-bold text-custom-dark-green">exceptional web solutions</span> tailored to your needs, all while ensuring they fit within realistic budgets. We understand the delicate balance between <span class="font-bold text-custom-dark-green">quality</span> and <span class="font-bold text-custom-dark-green">affordability</span>, and we pride ourselves on timely project completion. <span class="font-bold text-custom-dark-green">Trust Us</span> to transform your vision into reality with our <span class="font-bold text-custom-dark-green">high-quality work</span>, pragmatic pricing, and unwavering commitment to <span class="font-bold text-custom-dark-green">on-time delivery</span>.</p>
@@ -127,20 +127,57 @@
     </div>
 
     {{-- What we do --}}
-    <div class="c-container bg-custom-lightest-green flex flex-col min-h-screen py-20">
-        <div class="flex flex-col items-end">
-            <h1 class="text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">What We Do?</h1>
+    <div class="c-container bg-custom-lightest-green flex flex-col min-h-screen py-20 gap-16">
+        <div class="flex flex-col items-end gap-2">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">What We Do?</h1>
 
-            <p class="font-montserrat font-medium text-base md:text-lg xl:text-xl leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">At <span class="font-bold text-custom-dark-green">WebCreativs</span>, we offer a wide range of services to cater to your diverse needs, including:</p>
+            <p class="font-montserrat font-medium text-end text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">At <span class="font-bold text-custom-dark-green">WebCreativs</span>, we offer a wide range of services to cater to your diverse needs, including:</p>
         </div>
 
-        <div class="grid grid-cols-3 text-center">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-            <div>4</div>
-            <div>5</div>
-            <div>6</div>
+        <div class="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-16 text-center">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
+                <img src="{{ asset('assets/what-we-do/personal-website.svg') }}?t={{ env('VERSION_TIME') }}" alt="personal-website" class="h-48">
+
+                <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Personal Website</h1>
+
+                <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create personalized websites that encompass personal portfolios, blogs, and more. These websites serve as a comprehensive online platform to showcase your skills, experiences, and insights</p>
+            </div>
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
+                <img src="{{ asset('assets/what-we-do/company-profile.svg') }}?t={{ env('VERSION_TIME') }}" alt="company-profile" class="h-48">
+
+                <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Company Profile</h1>
+
+                <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We develop professional company profiles that showcase your business's identity, values, and achievements, helping you make a strong impression on potential clients and partners</p>
+            </div>
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
+                <img src="{{ asset('assets/what-we-do/landing-page.svg') }}?t={{ env('VERSION_TIME') }}" alt="landing-page" class="h-48">
+
+                <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Landing Page</h1>
+
+                <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our expertly designed landing pages are tailored to capture the attention of your target audience and drive conversions effectively</p>
+            </div>
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
+                <img src="{{ asset('assets/what-we-do/e-learning.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-learning" class="h-48">
+
+                <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Learning</h1>
+
+                <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our e-learning solutions are designed to facilitate seamless online education, making it easy for you to share knowledge, courses, and resources with your audience.</p>
+            </div>
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
+                <img src="{{ asset('assets/what-we-do/e-commerce.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-commerce" class="h-48">
+
+                <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Commerce</h1>
+
+                <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create fully functional e-commerce websites that allow you to showcase and sell your products or services online, providing a seamless shopping experience for your customers</p>
+            </div>
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
+                <img src="{{ asset('assets/what-we-do/many-more.svg') }}?t={{ env('VERSION_TIME') }}" alt="many-more" class="h-48">
+
+                <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Many More ++</h1>
+
+                <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We love challenges and are open to working on a wide variety of web projects, from forums and social networks to community websites. Whatever your vision, we can bring it to life on the web
+                </p>
+            </div>
         </div>
 
     </div>
