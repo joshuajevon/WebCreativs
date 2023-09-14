@@ -17,6 +17,7 @@ module.exports = {
             colors: {
                 custom: {
                     // custom-[name] => custom-dark-green
+                    "dark-blue": "#516371",
                     "dark-green": "#5f6342",
                     "light-green": "#6f7748",
                     "lighter-green": "#9daa76",
