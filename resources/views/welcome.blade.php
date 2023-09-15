@@ -135,42 +135,42 @@
         </div>
 
         <div class="flex overflow-x-scroll xl:overflow-x-visible xl:grid xl:grid-cols-2 2xl:grid-cols-3 gap-8 sm:gap-10 md:gap-12 xl:gap-16 text-center group">
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/personal-website.svg') }}?t={{ env('VERSION_TIME') }}" alt="personal-website" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Personal Website</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create personalized websites that encompass personal portfolios, blogs, and more. These websites serve as a comprehensive online platform to showcase your skills, experiences, and insights</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/company-profile.svg') }}?t={{ env('VERSION_TIME') }}" alt="company-profile" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Company Profile</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We develop professional company profiles that showcase your business's identity, values, and achievements, helping you make a strong impression on potential clients and partners</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/landing-page.svg') }}?t={{ env('VERSION_TIME') }}" alt="landing-page" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Landing Page</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our expertly designed landing pages are tailored to capture the attention of your target audience and drive conversions effectively</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/e-learning.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-learning" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Learning</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our e-learning solutions are designed to facilitate seamless online education, making it easy for you to share knowledge, courses, and resources with your audience.</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/e-commerce.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-commerce" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Commerce</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create fully functional e-commerce websites that allow you to showcase and sell your products or services online, providing a seamless shopping experience for your customers</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/many-more.svg') }}?t={{ env('VERSION_TIME') }}" alt="many-more" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Many More ++</h1>
@@ -181,7 +181,7 @@
         </div>
     </div>
 
-    {{-- What we do --}}
+    {{-- Work Process --}}
     <div class="c-container bg-custom-off-white flex flex-col min-h-screen py-20 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
         <div class="flex flex-col items-start gap-8 z-20 flex-1">
             <span class="relative">
