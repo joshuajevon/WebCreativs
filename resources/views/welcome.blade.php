@@ -40,7 +40,7 @@
         </a>
 
         <button class="block rounded bg-custom-red p-3 transition" onclick="toggleNavbar()">
-            <div class="h-6 w-6  relative">
+            <div class="h-6 w-6 relative">
                 <span id="nav-icon-top" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-x-0 mx-auto top-0.5 transition"></span>
                 <span id="nav-icon-mid" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-0 m-auto transition"></span>
                 <span id="nav-icon-bottom" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-x-0 mx-auto bottom-0.5 transition"></span>
@@ -49,16 +49,16 @@
     </nav>
 
     {{-- Mobile Links --}}
-    <nav id="mobile-nav-links" class="c-container font-libre py-2 bg-custom-off-white hidden text-custom-light-green text-sm sm:text-base md:text-lg absolute top-[83.39px] sm:top-[89.81px] md:top-[96.23px] left-0 z-40 w-full shadow-lg">
-        <a href="#home" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Home</a>
+    <nav id="mobile-nav-links" class="c-container font-libre py-2 bg-custom-off-white hidden text-custom-light-green text-sm sm:text-base md:text-lg fixed top-[83.39px] sm:top-[89.81px] md:top-[96.23px] left-0 z-40 w-full shadow-lg">
+        <a href="#home" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Home</a>
 
-        <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">About Us</a>
+        <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">About Us</a>
 
-        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Projects</a>
+        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Projects</a>
 
-        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
+        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Contact Us</a>
 
-        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green">EN</a>
+        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">EN</a>
     </nav>
 
     {{-- Hero --}}
@@ -127,51 +127,51 @@
     </div>
 
     {{-- What we do --}}
-    <div class="c-container bg-custom-lightest-green flex flex-col min-h-screen py-20 gap-16">
+    <div class="c-container min-h-screen bg-custom-lightest-green flex flex-col py-20 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
         <div class="flex flex-col items-end gap-2">
             <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">What We Do?</h1>
 
             <p class="font-montserrat font-medium text-end text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">At <span class="font-bold text-custom-dark-green">WebCreativs</span>, we offer a wide range of services to cater to your diverse needs, including:</p>
         </div>
 
-        <div class="grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-16 text-center">
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
-                <img src="{{ asset('assets/what-we-do/personal-website.svg') }}?t={{ env('VERSION_TIME') }}" alt="personal-website" class="h-48">
+        <div class="flex overflow-x-scroll xl:overflow-x-visible xl:grid xl:grid-cols-2 2xl:grid-cols-3 gap-8 sm:gap-10 md:gap-12 xl:gap-16 text-center group">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+                <img src="{{ asset('assets/what-we-do/personal-website.svg') }}?t={{ env('VERSION_TIME') }}" alt="personal-website" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Personal Website</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create personalized websites that encompass personal portfolios, blogs, and more. These websites serve as a comprehensive online platform to showcase your skills, experiences, and insights</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
-                <img src="{{ asset('assets/what-we-do/company-profile.svg') }}?t={{ env('VERSION_TIME') }}" alt="company-profile" class="h-48">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+                <img src="{{ asset('assets/what-we-do/company-profile.svg') }}?t={{ env('VERSION_TIME') }}" alt="company-profile" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Company Profile</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We develop professional company profiles that showcase your business's identity, values, and achievements, helping you make a strong impression on potential clients and partners</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
-                <img src="{{ asset('assets/what-we-do/landing-page.svg') }}?t={{ env('VERSION_TIME') }}" alt="landing-page" class="h-48">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+                <img src="{{ asset('assets/what-we-do/landing-page.svg') }}?t={{ env('VERSION_TIME') }}" alt="landing-page" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Landing Page</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our expertly designed landing pages are tailored to capture the attention of your target audience and drive conversions effectively</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
-                <img src="{{ asset('assets/what-we-do/e-learning.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-learning" class="h-48">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+                <img src="{{ asset('assets/what-we-do/e-learning.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-learning" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Learning</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our e-learning solutions are designed to facilitate seamless online education, making it easy for you to share knowledge, courses, and resources with your audience.</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
-                <img src="{{ asset('assets/what-we-do/e-commerce.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-commerce" class="h-48">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+                <img src="{{ asset('assets/what-we-do/e-commerce.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-commerce" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Commerce</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create fully functional e-commerce websites that allow you to showcase and sell your products or services online, providing a seamless shopping experience for your customers</p>
             </div>
-            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-12 p-16 rounded-xl opacity-75 transition hover:opacity-100 hover:scale-105 font-montserrat">
-                <img src="{{ asset('assets/what-we-do/many-more.svg') }}?t={{ env('VERSION_TIME') }}" alt="many-more" class="h-48">
+            <div class="bg-custom-off-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 xl:w-auto flex-none">
+                <img src="{{ asset('assets/what-we-do/many-more.svg') }}?t={{ env('VERSION_TIME') }}" alt="many-more" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Many More ++</h1>
 
@@ -179,7 +179,20 @@
                 </p>
             </div>
         </div>
+    </div>
 
+    {{-- What we do --}}
+    <div class="c-container bg-custom-off-white flex flex-col min-h-screen py-20 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+        <div class="flex flex-col items-start gap-8 z-20 flex-1">
+            <span class="relative">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Work Process.</h1>
+                <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 bottom-0"></span>
+            </span>
+
+            <p class="font-montserrat font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">
+                At <span class="font-bold text-custom-dark-green">WebCreativs</span>, we prioritize transparency, ensuring you're well-informed about each step in bringing your website vision to life.
+            </p>
+        </div>
     </div>
 
     {{-- Scripts --}}

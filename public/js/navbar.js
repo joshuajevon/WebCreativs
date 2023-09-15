@@ -2,22 +2,23 @@ let isNavbarOpen = false;
 const menuIconTop = $("#nav-icon-top");
 const menuIconMid = $("#nav-icon-mid");
 const menuIconBot = $("#nav-icon-bottom");
-// const mobileBackground = $("#mobile-background");
 
 function toggleNavbar() {
     if (!isNavbarOpen) {
-        menuIconTop.addClass("rotate-45 translate-y-[6px]");
-        menuIconBot.addClass("-rotate-45 -translate-y-[8px]");
+        menuIconTop.removeClass("inset-x-0 mx-auto top-0.5");
+        menuIconTop.addClass("inset-0 m-auto rotate-45");
+        menuIconBot.removeClass("inset-x-0 mx-auto bottom-0.5");
+        menuIconBot.addClass("inset-0 m-auto -rotate-45");
         menuIconMid.addClass("opacity-0");
         $("#mobile-nav-links").slideDown();
-        // mobileBackground.fadeIn();
         isNavbarOpen = true;
     } else {
-        menuIconTop.removeClass("rotate-45 translate-y-[6px]");
-        menuIconBot.removeClass("-rotate-45 -translate-y-[8px]");
+        menuIconTop.removeClass("inset-0 m-auto rotate-45");
+        menuIconTop.addClass("inset-x-0 mx-auto top-0.5");
+        menuIconBot.removeClass("inset-0 m-auto -rotate-45");
+        menuIconBot.addClass("inset-x-0 mx-auto bottom-0.5");
         menuIconMid.removeClass("opacity-0");
         $("#mobile-nav-links").slideUp();
-        // mobileBackground.fadeOut();
         isNavbarOpen = false;
     }
 }
@@ -29,8 +30,10 @@ window.addEventListener(
             window.innerWidth || document.documentElement.clientWidth;
 
         if (windowWidth >= 1280) {
-            $("#nav-icon-top").removeClass("rotate-45 translate-y-[6px]");
-            $("#nav-icon-bottom").removeClass("-rotate-45 -translate-y-[8px]");
+            menuIconTop.removeClass("inset-0 m-auto rotate-45");
+            menuIconTop.addClass("inset-x-0 mx-auto top-0.5");
+            menuIconBot.removeClass("inset-0 m-auto -rotate-45");
+            menuIconBot.addClass("inset-x-0 mx-auto bottom-0.5");
             $("#nav-icon-mid").removeClass("opacity-0");
             $("#mobile-nav-links").slideUp();
             // mobileBackground.fadeOut();
