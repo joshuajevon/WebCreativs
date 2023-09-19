@@ -380,6 +380,38 @@
         </div>
     </div>
 
+    {{-- Latest Project --}}
+    <div class="c-container bg-custom-off-white flex flex-col justify-center items-center py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+        <span class="relative">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Latest Project.</h1>
+            <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
+        </span>
+
+        <div>
+            <h1 class="text-custom-light-green font-montserrat font-bold text-lg sm:text-xl md:text:2xl xl:text-3xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose">asetaset.com</h1>
+        </div>
+
+        <div>
+            <a href="https://asetaset.com/" target="_blank" ref="noopener noreferrer" class="text-base font-montserrat text-custom-light-green font-bold underline">www.asetaset.com</a>
+            <div>CAROUSEL</div>
+        </div>
+
+        <div class="font-montserrat w-full xl:w-[800px] flex flex-col gap-4">
+            <p class="font-bold text-8xl -mb-14 -ml-16">“</p>
+            <p class="font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
+            <p class="text-custom-dark-blue text-base">Wilhelmus Rio, Founder of asetaset.com</p>
+            <p class="font-bold text-8xl self-end -mt-8 -mr-4">”</p>
+        </div>
+    </div>
+
+    {{-- Our Team --}}
+    <div class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+        <span class="relative">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Our Team.</h1>
+            <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
+        </span>
+    </div>
+
     {{-- Scripts --}}
     <script src="{{ asset('js/navbar.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/work-process.js') }}?t={{ env('VERSION_TIME') }}"></script>
