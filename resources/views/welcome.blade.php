@@ -12,6 +12,9 @@
 
     {{-- Jquery --}}
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    {{-- Splide JS --}}
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
     <nav class="hidden xl:flex c-container justify-between items-center py-4 fixed z-50 w-full shadow-lg font-libre bg-custom-off-white">
@@ -201,7 +204,7 @@
             </p>
         </div>
 
-        <div id="work-process-selectors" class="w-full flex justify-between items-center gap-8 flex-wrap">
+        <div id="work-process-selectors" class="w-full flex justify-between items-center gap-8 flex-wrap z-20">
             <div class="active work-process-selector flex justify-center items-center rounded-full p-8 bg-white text-custom-light-green shadow-[0px_3.13402px_3.13402px_0px_#5F6342] cursor-pointer transition" onclick="changeWorkProcess(this)" data-work-process="1">
                 <svg class="w-12 aspect-square" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule=" evenodd" clip-rule="evenodd" d="M2.11989 4.3838H5.78226V8.04617H20.4317V4.3838H24.0942V7.13058H25.9253V2.55261H20.2755C19.8983 1.48578 18.881 0.721436 17.6849 0.721436H8.52904C7.33307 0.721436 6.31563 1.48578 5.93855 2.55261H0.288696V31.8516H25.9253V26.358H24.0942V30.0204H2.11989V4.3838ZM7.61345 6.215V3.46822C7.61345 2.96253 8.02337 2.55261 8.52904 2.55261H17.6849C18.1907 2.55261 18.6006 2.96253 18.6006 3.46822V6.215H7.61345Z" fill="currentColor" />
@@ -275,7 +278,7 @@
             </div>
         </div>
 
-        <div class="c-container">
+        <div class="c-container z-20">
             <div class="work-process-detail" data-work-process="1">
                 <div class="c-container w-full flex justify-center items-center bg-white py-24 px-32 border border-custom-dark-green rounded-3xl gap-32">
                     <div class="text-custom-light-green">
@@ -375,28 +378,48 @@
         </div>
 
 
-        <div class="self-end font-montserrat">
+        <div class="self-end font-montserrat z-20">
             <p class="text-custom-dark-gray text-base text-end">**You'll receive project reports every week to stay updated on our progress and milestones.</p>
         </div>
     </div>
 
     {{-- Latest Project --}}
-    <div class="c-container bg-custom-off-white flex flex-col justify-center items-center py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
-        <span class="relative">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Latest Project.</h1>
-            <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
-        </span>
+    <div class="bg-custom-off-white flex flex-col justify-center items-center py-48 pb-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16 relative">
+        <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute -top-[50rem] z-10 rotate-180">
 
-        <div>
-            <h1 class="text-custom-light-green font-montserrat font-bold text-lg sm:text-xl md:text:2xl xl:text-3xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose">asetaset.com</h1>
+        <div class="c-container z-20 flex flex-col justify-center items-center gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+            <span class="relative ">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Latest Project.</h1>
+                <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
+            </span>
+
+            <div class="">
+                <h1 class="text-custom-light-green font-montserrat font-bold text-lg sm:text-xl md:text:2xl xl:text-3xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose">asetaset.com</h1>
+            </div>
+
+            <div class="">
+                <a href="https://asetaset.com/" target="_blank" ref="noopener noreferrer" class="text-base font-montserrat text-custom-light-green font-bold underline">www.asetaset.com</a>
+            </div>
         </div>
 
-        <div>
-            <a href="https://asetaset.com/" target="_blank" ref="noopener noreferrer" class="text-base font-montserrat text-custom-light-green font-bold underline">www.asetaset.com</a>
-            <div>CAROUSEL</div>
-        </div>
+        <!-- Slider main container -->
+        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide flex justify-center">
+                        <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
+                    </li>
+                    <li class="splide__slide flex justify-center">
+                        <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
+                    </li>
+                    <li class="splide__slide flex justify-center">
+                        <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
+                    </li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="font-montserrat w-full xl:w-[800px] flex flex-col gap-4">
+        <div class="c-container font-montserrat w-full xl:w-[800px] flex flex-col gap-4 z-20">
             <p class="font-bold text-8xl -mb-14 -ml-16">“</p>
             <p class="font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
             <p class="text-custom-dark-blue text-base">Wilhelmus Rio, Founder of asetaset.com</p>
@@ -405,15 +428,73 @@
     </div>
 
     {{-- Our Team --}}
-    <div class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+    <div class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
         <span class="relative">
             <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Our Team.</h1>
             <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
         </span>
+
+        <div class="flex justify-center gap-32 w-full c-container">
+            <div class="flex flex-col justify-center items-center font-montserrat gap-4 text-2xl ">
+                <img src="{{asset("assets/our-team/christopher.svg")}}" alt="christopher">
+                <h2 class="font-bold">Christopher N. Tessy</h2>
+                <h2 class="font-semibold opacity-50">Front End Developer</h2>
+                <div class="flex justify-center items-center gap-4">
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-linked-in.svg")}}" alt="linked-in" class="w-8">
+                    </a>
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-instagram.svg")}}" alt="instagram" class="w-8">
+                    </a>
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-gmail.svg")}}" alt="gmail" class="w-8">
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center font-montserrat gap-4 text-2xl translate-y-12">
+                <img src="{{asset("assets/our-team/gama.svg")}}" alt="gama">
+                <h2 class="font-bold">Gamaliel Satria D.</h2>
+                <h2 class="font-semibold opacity-50">Founder</h2>
+                <div class="flex justify-center items-center gap-4">
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-linked-in.svg")}}" alt="linked-in" class="w-8">
+                    </a>
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-instagram.svg")}}" alt="instagram" class="w-8">
+                    </a>
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-gmail.svg")}}" alt="gmail" class="w-8">
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex flex-col justify-center items-center font-montserrat gap-4 text-2xl">
+                <img src="{{asset("assets/our-team/joshua.svg")}}" alt="joshua">
+                <h2 class="font-bold">Joshua Jevon I.</h2>
+                <h2 class="font-semibold opacity-50">Back End Developer</h2>
+                <div class="flex justify-center items-center gap-4">
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-linked-in.svg")}}" alt="linked-in" class="w-8">
+                    </a>
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-instagram.svg")}}" alt="instagram" class="w-8">
+                    </a>
+                    <a href="">
+                        <img src="{{asset("assets/our-team/icon-gmail.svg")}}" alt="gmail" class="w-8">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+
+
+    {{-- Splide JS --}}
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     {{-- Scripts --}}
     <script src="{{ asset('js/navbar.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/work-process.js') }}?t={{ env('VERSION_TIME') }}"></script>
+    <script src="{{ asset('js/latest-project.js') }}?t={{ env('VERSION_TIME') }}"></script>
 </body>
 </html>

@@ -9,6 +9,40 @@
     scroll-behavior: smooth;
 }
 
+.splide {
+    padding-bottom: 4rem;
+}
+
+.splide__slide.is-active img {
+    opacity: 100%;
+    transform: scale(1);
+}
+
+.splide__slide img {
+    opacity: 50%;
+    transform: scale(0.8);
+    width: 100%;
+    height: auto;
+}
+
+ul.splide__pagination {
+    gap: 1rem;
+}
+
+button.splide__pagination__page {
+    background-color: #c7cda7;
+    transform: scale(1.5);
+    transition: all;
+}
+
+button.splide__pagination__page.is-active {
+    background-color: #6f7748;
+    width: 1.5rem;
+    border-radius: 9999px;
+    transform: scale(1.5);
+    transition: all;
+}
+
 @layer components {
     .c-container {
         @apply px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24;
