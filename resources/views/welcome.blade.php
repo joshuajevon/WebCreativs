@@ -491,7 +491,7 @@
 
 
     {{-- Contact Form ya tes --}}
-    <div class="col-span-1">
+    <div class="col-span-1" id="contact-form-section">
         <form id="form-hubungi-kami" method="POST" action="{{ route('contact') }}"
             class="bg-cWhite py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 2xl:py-32 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-14 2xl:px-16 flex flex-col justify-center items-start gap-6"
             >
@@ -584,5 +584,19 @@
     <script src="{{ asset('js/navbar.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/work-process.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/latest-project.js') }}?t={{ env('VERSION_TIME') }}"></script>
+
+    {{-- Auto scroll after submit contact form --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const redirected = {{ session('redirected', 'false') }};
+            if (redirected) {
+                $('html, body').animate({
+                    scrollTop: $('#contact-form-section').offset().top
+                }, 1000);
+            }
+        });
+    </script>
+
 </body>
 </html>
