@@ -9,6 +9,27 @@
     scroll-behavior: smooth;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none !important;
+}
+
+/* CSS for input when autofilled in Webkit browsers */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    -webkit-text-fill-color: black !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    box-shadow: 0 0 0px 1000px transparent inset !important;
+    background-color: transparent !important;
+    font-family: "montserrat", sans-serif !important;
+}
 .splide {
     padding-bottom: 4rem;
 }

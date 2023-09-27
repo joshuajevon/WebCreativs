@@ -27,9 +27,9 @@
 
                 <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">About Us</a>
 
-                <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Projects</a>
+                <a href="#latest-project" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Projects</a>
 
-                <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
+                <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
 
                 <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green">EN</a>
             </span>
@@ -57,9 +57,9 @@
 
         <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">About Us</a>
 
-        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Projects</a>
+        <a href="#latest-project" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Projects</a>
 
-        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Contact Us</a>
+        <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Contact Us</a>
 
         <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">EN</a>
     </nav>
@@ -115,7 +115,7 @@
         </a>
     </div>
 
-    {{-- About US --}}
+    {{-- About Us --}}
     <div id="about-us" class="c-container min-h-screen flex justify-center items-center bg-custom-off-white py-32">
         <div class="c-container flex justify-center items-center gap-24 z-20">
             <div class="hidden xl:flex flex-col justify-center items-center z-20">
@@ -137,7 +137,7 @@
     </div>
 
     {{-- What we do --}}
-    <div class="c-container min-h-screen bg-custom-lightest-green flex flex-col py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+    <div id="what-we-do" class="c-container min-h-screen bg-custom-lightest-green flex flex-col py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
         <div class="flex flex-col items-end gap-2">
             <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">What We Do?</h1>
 
@@ -145,42 +145,42 @@
         </div>
 
         <div class="flex overflow-x-scroll xl:overflow-x-visible xl:grid xl:grid-cols-2 2xl:grid-cols-3 gap-8 sm:gap-10 md:gap-12 xl:gap-16 text-center group">
-            <div class="bg-custom-off-white hover:bg-[#ffff] text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
+            <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/personal-website.svg') }}?t={{ env('VERSION_TIME') }}" alt="personal-website" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Personal Website</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create personalized websites that encompass personal portfolios, blogs, and more. These websites serve as a comprehensive online platform to showcase your skills, experiences, and insights</p>
             </div>
-            <div class="bg-custom-off-white hover:bg-[#ffff] text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
+            <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/company-profile.svg') }}?t={{ env('VERSION_TIME') }}" alt="company-profile" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Company Profile</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We develop professional company profiles that showcase your business's identity, values, and achievements, helping you make a strong impression on potential clients and partners</p>
             </div>
-            <div class="bg-custom-off-white hover:bg-[#ffff] text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
+            <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/landing-page.svg') }}?t={{ env('VERSION_TIME') }}" alt="landing-page" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Landing Page</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our expertly designed landing pages are tailored to capture the attention of your target audience and drive conversions effectively</p>
             </div>
-            <div class="bg-custom-off-white hover:bg-[#ffff] text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
+            <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/e-learning.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-learning" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Learning</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">Our e-learning solutions are designed to facilitate seamless online education, making it easy for you to share knowledge, courses, and resources with your audience.</p>
             </div>
-            <div class="bg-custom-off-white hover:bg-[#ffff] text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
+            <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/e-commerce.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-commerce" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">E-Commerce</h1>
 
                 <p class="font-medium text-center text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray ">We create fully functional e-commerce websites that allow you to showcase and sell your products or services online, providing a seamless shopping experience for your customers</p>
             </div>
-            <div class="bg-custom-off-white hover:bg-[#ffff] text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
+            <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/many-more.svg') }}?t={{ env('VERSION_TIME') }}" alt="many-more" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-base sm:text-lg md:text-xl xl:text-2xl">Many More ++</h1>
@@ -192,7 +192,7 @@
     </div>
 
     {{-- Work Process --}}
-    <div class="c-container bg-custom-off-white flex flex-col justify-center items-center py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-24">
+    <div id="work-process" class="c-container bg-custom-off-white flex flex-col justify-center items-center py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-24">
         <div class="c-container flex flex-col items-start w-full gap-8 z-20">
             <span class="relative">
                 <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Work Process.</h1>
@@ -384,7 +384,7 @@
     </div>
 
     {{-- Latest Project --}}
-    <div class="bg-custom-off-white flex flex-col justify-center items-center py-48 pb-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16 relative">
+    <div id="latest-project" class="bg-custom-off-white flex flex-col justify-center items-center py-48 pb-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16 relative">
         <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute -top-[50rem] z-10 rotate-180">
 
         <div class="c-container z-20 flex flex-col justify-center items-center gap-8 sm:gap-10 md:gap-12 xl:gap-16">
@@ -402,33 +402,32 @@
             </div>
         </div>
 
-        <!-- Slider main container -->
-        <section id="image-carousel" class="splide" aria-label="Beautiful Images">
+        {{-- <section id="image-carousel" class="splide" aria-label="Beautiful Images">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide flex justify-center">
                         <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
-                    </li>
-                    <li class="splide__slide flex justify-center">
-                        <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
-                    </li>
-                    <li class="splide__slide flex justify-center">
-                        <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
-                    </li>
-                </ul>
-            </div>
-        </section>
+        </li>
+        <li class="splide__slide flex justify-center">
+            <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
+        </li>
+        <li class="splide__slide flex justify-center">
+            <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
+        </li>
+        </ul>
+    </div>
+    </section> --}}
 
-        <div class="c-container font-montserrat w-full xl:w-[800px] flex flex-col gap-4 z-20">
+    {{-- <div class="c-container font-montserrat w-full xl:w-[800px] flex flex-col gap-4 z-20">
             <p class="font-bold text-8xl -mb-14 -ml-16">“</p>
             <p class="font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
             <p class="text-custom-dark-blue text-base">Wilhelmus Rio, Founder of asetaset.com</p>
             <p class="font-bold text-8xl self-end -mt-8 -mr-4">”</p>
-        </div>
+        </div> --}}
     </div>
 
     {{-- Our Team --}}
-    <div class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
+    <div id="our-team" class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
         <span class="relative">
             <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Our Team.</h1>
             <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
@@ -488,92 +487,75 @@
         </div>
     </div>
 
+    {{-- Contact Us --}}
+    <div id="contact-us" class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
+        <div class="c-container flex flex-col items-start w-full gap-8 z-20">
+            <span class="relative">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-5xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Contact Us.</h1>
+                <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 bottom-0"></span>
+            </span>
 
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-16">
+                <div class="col-span-1 flex flex-col gap-8">
+                    <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-64">
 
-    {{-- Contact Form ya tes --}}
-    <div class="col-span-1" id="contact-form-section">
-        <form id="form-hubungi-kami" method="POST" action="{{ route('contact') }}"
-            class="bg-cWhite py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 2xl:py-32 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-14 2xl:px-16 flex flex-col justify-center items-start gap-6"
-            >
-            @csrf
-            <div
-                class="w-full flex flex-col justify-center items-start gap-4 sm:gap-6 lg:gap-8 px-4 pb-5 border-b-2 border-b-cGold">
-                <img class="w-28 sm:w-32 md:w-36 lg:w-40 xl:w-44 2xl:w-48"
-                    src="{{ asset('assets/logo/asetaset-full.png') }}" alt="logo">
-                {{-- <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-medium">Jangan
-                    Ragu Untuk Menghubungi Kami</span> --}}
-                </h1>
-                <p class="text-base sm:text-lg">Silahkan isi data diri anda, dan tim kami akan segera menghubungi
-                    untuk membantu anda</span>.
-                </p>
-            </div>
-
-            {{-- Nama --}}
-            <div class="px-4 w-full pt-2 sm:pt-4 lg:pt-6">
-                <div class="flex gap-1 text-base sm:text-lg">
-                    <label for="nama-hubungi-kami">Nama</label>
-                    <span class="text-red-500">*</span>
-                </div>
-                <input autocomplete="false" placeholder="Nama Anda" id="nama-hubungi-kami"
-                    class="mt-1 w-full" type="text" name="name" value="{{ old('name') }}" required/>
-                {{-- @error('name')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror --}}
-            </div>
-
-            {{-- Alamat Email --}}
-            <div class="px-4 w-full">
-                <div class="flex gap-1 text-base sm:text-lg">
-                    <label for="email-hubungi-kami" >Email</label>
-                    <span class="text-red-500">*</span>
-                </div>
-                <input autocomplete="false" placeholder="contoh@gmail.com" id="email-hubungi-kami"
-                    class="mt-1 w-full" type="email" name="email" value="{{ old('email') }}" required/>
-                {{-- @error('email')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror --}}
-            </div>
-
-            {{-- Subject --}}
-            <div class="px-4 w-full">
-                <div class="flex gap-1 text-base sm:text-lg">
-                    <label for="subjek-hubungi-kami" >Subject</label>
-                    <span class="text-red-500">*</span>
-                </div>
-                <input autocomplete="false" placeholder="Judul Pesan Anda" id="subjek-hubungi-kami"
-                    class="mt-1 w-full" type="text" name="subject" value="{{ old('subject') }}" required/>
-                {{-- @error('subject')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror --}}
-            </div>
-
-            {{-- Pesan --}}
-            <div class="px-4 w-full">
-                <div class="flex gap-1 text-base sm:text-lg">
-                    <label for="pesan-hubungi-kami" >Message</label>
-                    <span class="text-red-500">*</span>
-                </div>
-
-                <textarea name="mail" placeholder="Isi Pesan Anda"
-                    class="w-full mt-1 resize-none p-4 border border-cDarkGrey rounded-md text-sm sm:text-base bg-cWhite autofill:shadow-[inset_0_0_0px_1000px_rgb(255,255,255)]"
-                    id="pesan-hubungi-kami" rows="8" required>{{ old('mail') }}</textarea>
-                {{-- @error('mail')
-                    <div class="error-message">{{ $message }}</div>
-                @enderror --}}
-            </div>
-
-            <div class="px-4 w-full">
-                @if (session('success'))
-                    <p class="alert alert-success text-sm text-green-600">
-                        {{ session('success') }}
+                    <p class="font-montserrat font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">
+                        Got a project in mind? Don't hesitate to reach out and connect with us. Whether it's a design challenge or a project that needs expert management, we're here to collaborate and bring your ideas to life!
                     </p>
-                @endif
-            </div>
 
-            <div class="px-4">
-                <button type="submit" class="gold-btn px-12">Kirim Pesan</button>
+                    <a href="mailto:info@webcreativs.com" class="flex items-center gap-4">
+                        <img src="{{asset("assets/contact-us/icon-gmail.svg")}}" alt="gmail" class="w-8 md:w-9 xl:w-10">
+                        <p class="font-montserrat font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">info@webcreativs.com</p>
+                    </a>
+
+                    <a href="https://wa.me/6288211033984" target="_blank" rel="nonoopener noreferrer" class="flex items-center gap-4">
+                        <img src="{{asset("assets/contact-us/icon-whatsapp.svg")}}" alt="whatsapp" class="w-8 md:w-9 xl:w-10">
+                        <p class="font-montserrat font-medium text-sm sm:text-base md:text-lg xl:text-xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">088211033984</p>
+                    </a>
+                </div>
+
+                {{-- Contact Form --}}
+                <div class="col-span-1" id="contact-form-section">
+                    <form id="form-contact-us" method="POST" action="{{ route('contact') }}" class="font-montserrat flex-1 flex flex-col gap-6 sm:gap-7 md:gap-8 justify-center items-center w-full" onsubmit="contactUs(event)">
+                        @csrf
+                        <div class="flex flex-col gap-1 md:gap-2 w-full">
+                            <x-form.input-text name="name" :value="old('name')" required id="name" placeholder="Name" />
+                            <p id="error-name" class="text-xs sm:text-sm md:text-base text-red-800"></p>
+                        </div>
+
+                        <div class="flex flex-col gap-1 md:gap-2 w-full">
+                            <x-form.input-text name="email" :value="old('email')" required id="email" placeholder="Email" />
+                            <p id="error-email" class="text-xs sm:text-sm md:text-base text-red-800"></p>
+                        </div>
+
+                        <div class="flex flex-col gap-1 md:gap-2 w-full">
+                            <x-form.input-text name="subject" :value="old('subject')" required id="subject" placeholder="Subject" />
+                            <p id="error-subject" class="text-xs sm:text-sm md:text-base text-red-800"></p>
+                        </div>
+
+                        <div class="flex flex-col gap-1 md:gap-2 w-full">
+                            <x-form.input-textarea name="message" :value="old('message')" required id="message" placeholder="Message" />
+                            <p id="error-message" class="text-xs sm:text-sm md:text-base text-red-800"></p>
+                        </div>
+
+                        <x-form.submit-button value="Submit" />
+
+
+                        <div class="flex flex-col gap-1 md:gap-2 w-full justify-center items-center">
+                            @if (session('success'))
+                            <p class="text-xs sm:text-sm md:text-base text-custom-light-green text-center font-medium">
+                                {{ session('success') }}
+                            </p>
+                            @endif
+                            {{-- <p class="text-xs sm:text-sm md:text-base text-custom-light-green text-center font-medium">
+                                Your message has been sent, Thank you!
+                            </p> --}}
+                        </div>
+                    </form>
+                </div>
+
             </div>
-        </form>
+        </div>
     </div>
 
 
@@ -584,18 +566,23 @@
     <script src="{{ asset('js/navbar.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/work-process.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/latest-project.js') }}?t={{ env('VERSION_TIME') }}"></script>
+    <script src="{{ asset('js/contact-us.js') }}?t={{ env('VERSION_TIME') }}"></script>
 
     {{-- Auto scroll after submit contact form --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            const redirected = {{ session('redirected', 'false') }};
+            const redirected = {
+                {
+                    session('redirected', 'false')
+                }
+            };
             if (redirected) {
                 $('html, body').animate({
-                    scrollTop: $('#contact-form-section').offset().top
+                    scrollTop: $('#contact-us').offset().top
                 }, 1000);
             }
         });
+
     </script>
 
 </body>
