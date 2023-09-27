@@ -568,20 +568,16 @@
     <script src="{{ asset('js/contact-us.js') }}?t={{ env('VERSION_TIME') }}"></script>
 
     {{-- Auto scroll after submit contact form --}}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            const redirected = {
-                {
-                    session('redirected', 'false')
-                }
-            };
+            const redirected = {{ session('redirected', 'false') }};
             if (redirected) {
                 $('html, body').animate({
                     scrollTop: $('#contact-us').offset().top
                 }, 1000);
             }
         });
-
     </script>
 
 </body>
