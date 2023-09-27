@@ -515,7 +515,7 @@
                 </div>
 
                 {{-- Contact Form --}}
-                <div class="col-span-1" id="contact-form-section">
+                <div class="col-span-1" >
                     <form id="form-contact-us" method="POST" action="{{ route('contact') }}" class="font-montserrat flex-1 flex flex-col gap-6 sm:gap-7 md:gap-8 justify-center items-center w-full" onsubmit="contactUs(event)">
                         @csrf
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
@@ -534,7 +534,7 @@
                         </div>
 
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
-                            <textarea name="message" :value="old('message')" id="message" placeholder="Message" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium"></textarea>
+                            <textarea name="mail" :value="old('mail')" id="mail" placeholder="Message" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium"></textarea>
                             <p id="error-message" class="text-xs sm:text-sm md:text-base text-red-800"></p>
                         </div>
 
