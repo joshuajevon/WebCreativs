@@ -519,27 +519,26 @@
                     <form id="form-contact-us" method="POST" action="{{ route('contact') }}" class="font-montserrat flex-1 flex flex-col gap-6 sm:gap-7 md:gap-8 justify-center items-center w-full" onsubmit="contactUs(event)">
                         @csrf
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
-                            <x-form.input-text name="name" :value="old('name')" required id="name" placeholder="Name" />
+                            <input type="text" name="name" :value="old('name')" id="name" placeholder="Name" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium" />
                             <p id="error-name" class="text-xs sm:text-sm md:text-base text-red-800"></p>
                         </div>
 
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
-                            <x-form.input-text name="email" :value="old('email')" required id="email" placeholder="Email" />
+                            <input type="text" name="email" :value="old('email')" id="email" placeholder="Email" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium" />
                             <p id="error-email" class="text-xs sm:text-sm md:text-base text-red-800"></p>
                         </div>
 
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
-                            <x-form.input-text name="subject" :value="old('subject')" required id="subject" placeholder="Subject" />
+                            <input type="text" name="subject" :value="old('subject')" id="subject" placeholder="Subject" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium" />
                             <p id="error-subject" class="text-xs sm:text-sm md:text-base text-red-800"></p>
                         </div>
 
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
-                            <x-form.input-textarea name="message" :value="old('message')" required id="message" placeholder="Message" />
+                            <textarea name="message" :value="old('message')" id="message" placeholder="Message" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium"></textarea>
                             <p id="error-message" class="text-xs sm:text-sm md:text-base text-red-800"></p>
                         </div>
 
-                        <x-form.submit-button value="Submit" />
-
+                        <button class="bg-custom-light-green hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/20%)_0_0)] rounded-2xl text-white p-2 sm:p-3 md:p-4 w-full font-semibold text-base sm:text-lg md:text-xl">Submit</button>
 
                         <div class="flex flex-col gap-1 md:gap-2 w-full justify-center items-center">
                             @if (session('success'))

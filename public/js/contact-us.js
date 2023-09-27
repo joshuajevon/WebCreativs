@@ -1,17 +1,3 @@
-$(document).ready(function () {
-    const redirected = sessionStorage.getItem("redirected"); // Get the 'redirected' value from session storage
-
-    if (redirected === "false") {
-        // Check if 'redirected' is set to 'false'
-        $("html, body").animate(
-            {
-                scrollTop: $("#contact-form-section").offset().top,
-            },
-            1000
-        );
-    }
-});
-
 function contactUs(e) {
     e.preventDefault();
 
@@ -44,7 +30,7 @@ function contactUs(e) {
         errorName.text("Name cannot be empty");
         isNameValid = false;
     } else {
-        inputName.css("border-color", "#BB2825");
+        inputName.css("border-color", "#6f7748");
         errorName.text("");
         isNameValid = true;
     }
@@ -58,7 +44,7 @@ function contactUs(e) {
         // check if email is valid format
         if (regexEmail.test(valueEmail)) {
             // Email is valid
-            inputEmail.css("border-color", "black");
+            inputEmail.css("border-color", "#6f7748");
             errorEmail.text("");
             isEmailValid = true;
         } else {
@@ -75,7 +61,7 @@ function contactUs(e) {
         errorSubject.text("Subject cannot be empty");
         isSubjectValid = false;
     } else {
-        inputSubject.css("border-color", "black");
+        inputSubject.css("border-color", "#6f7748");
         errorSubject.text("");
         isSubjectValid = true;
     }
@@ -86,7 +72,7 @@ function contactUs(e) {
         errorMessage.text("Message cannot be empty");
         isMessageValid = false;
     } else {
-        inputMessage.css("border-color", "black");
+        inputMessage.css("border-color", "#6f7748");
         errorMessage.text("");
         isMessageValid = true;
     }

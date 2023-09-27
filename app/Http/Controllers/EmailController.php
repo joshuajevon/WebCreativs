@@ -42,7 +42,7 @@ class EmailController extends Controller
 
         Mail::to('webcreativs2@gmail.com')->send(new ContactFormMail($name, $email, $subject, $mail));
 
-        return redirect()->back()->with('success', 'Terima kasih telah menghubungi kami. Tim kami akan segera menghubungi anda')->with('redirected', true);
+        return redirect()->back()->with('success', 'Your message has been sent, Thank you!')->with('redirected', true);
     }
 
     public function storeEmail(Request $request)
