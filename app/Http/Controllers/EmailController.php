@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\ProcessNews;
+use App\Mail\ContactFormMail;
 use App\Mail\SendEmail;
 use App\Models\Email;
 use Illuminate\Support\Facades\Validator;
@@ -12,8 +13,36 @@ use Illuminate\Support\Facades\Mail;
 
 class EmailController extends Controller
 {
-    public function welcome(){
+    public function home(){
         return view('welcome');
+    }
+
+    public function contact(Request $request){
+        $rules = [
+            'name' => 'required|string',
+            'email' => 'required|email',
+            'subject' => 'required|string',
+            'mail' => 'required|string',
+        ];
+
+        $messages = [
+            'name.required' => 'Nama harus diisi',
+            'email.required' => 'Alamat email harus diisi',
+            'email.email' => 'Alamat email harus valid',
+            'subject.required' => 'Subjek harus diisi',
+            'mail.required' => 'Pesan harus diisi',
+        ];
+
+        $request->validate($rules, $messages);
+
+        $name = $request->input('name');
+        $email = $request->input('email');
+        $subject = $request->input('subject');
+        $mail = $request->input('mail');
+
+        Mail::to('webcreativs2@gmail.com')->send(new ContactFormMail($name, $email, $subject, $mail));
+
+        return redirect()->back()->with('success', 'Terima kasih telah menghubungi kami. Tim kami akan segera menghubungi anda');
     }
 
     public function storeEmail(Request $request)
@@ -54,4 +83,6 @@ class EmailController extends Controller
 
         return response()->json(200);
     }
+
+
 }
