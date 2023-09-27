@@ -13,7 +13,7 @@ function contactUs(e) {
     let valueSubject = inputSubject.val();
     const errorSubject = $("#error-subject");
 
-    const inputMessage = $("#message");
+    const inputMessage = $("#mail");
     let valueMessage = inputMessage.val();
     const errorMessage = $("#error-message");
 
