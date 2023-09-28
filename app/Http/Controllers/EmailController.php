@@ -17,6 +17,10 @@ class EmailController extends Controller
         return view('welcome');
     }
 
+    public function homeId(){
+        return view('welcome-id');
+    }
+
     public function contact(Request $request)
 {
     $rules = [

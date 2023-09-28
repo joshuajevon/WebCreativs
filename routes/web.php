@@ -18,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [EmailController::class, 'home'])->name('home');
 
 Route::post('/contact', [EmailController::class, 'contact'])->name('contact');
+
+Route::get('/id', [EmailController::class, 'homeId'])->name('homeId');
