@@ -14,13 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(EmailController::class)->group(function () {
-    Route::get('/', 'home')->name('home');
+Route::get('/', [EmailController::class, 'home'])->name('home');
 
-    Route::post('/contact', 'contact')->name('contact');
+Route::post('/contact', [EmailController::class, 'contact'])->name('contact');
 
-    Route::post('/store-email', 'storeEmail')->name('storeEmail');
+Route::post('/store-email', [EmailController::class, 'storeEmail'])->name('storeEmail');
 
-    Route::get('/id', 'homeId')->name('homeId');
-});
-
+Route::get('/id', [EmailController::class, 'homeId'])->name('homeId');
