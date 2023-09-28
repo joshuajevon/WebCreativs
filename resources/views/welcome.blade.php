@@ -28,7 +28,7 @@
 
                 <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
 
-                <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green">EN</a>
+                <a href="/id" class="transition-colors text-custom-light-green hover:text-custom-dark-green">EN</a>
             </span>
         </span>
     </nav>
