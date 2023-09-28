@@ -64,17 +64,25 @@ class EmailController extends Controller
     public function storeEmail(Request $request)
     {
 
-        $val = Validator::make($request->all(), [
-            'Email' =>  'required|email|unique:emails,Email,except,id'
-        ]);
+        $Email = $request->input('Email');
 
-        if ($val->fails()) {
-            return response()->json(["code" => 400]);
+        // $val = Validator::make($request->all(), [
+        //     'Email' =>  'required|email|unique:emails,Email,except,id'
+        // ]);
+
+        // if ($val->fails()) {
+        //     return response()->json(["code" => 400]);
+        // }
+
+        // $to = $request->Email;
+
+        $exists = Email::where('Email', $Email)->exists();
+
+        if ($exists){
+            return response()->json(['exists' => $exists]);
         }
 
-        $to = $request->Email;
-
-        Mail::to($to)->send(new SendEmail());
+        Mail::to($Email)->send(new SendEmail());
 
         Email::create([
             'Email' => $request->Email

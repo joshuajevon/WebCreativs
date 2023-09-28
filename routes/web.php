@@ -19,4 +19,6 @@ Route::get('/', [EmailController::class, 'home'])->name('home');
 
 Route::post('/contact', [EmailController::class, 'contact'])->name('contact');
 
+Route::post('/store-email', [EmailController::class, 'storeEmail'])->name('storeEmail');
+
 Route::get('/id', [EmailController::class, 'homeId'])->name('homeId');

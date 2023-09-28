@@ -20,6 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::controller(EmailController::class)->group(function () {
-    Route::post('/store-email', 'storeEmail')->name('storeEmail');
+    // Route::post('/store-email', 'storeEmail')->name('storeEmail');
     Route::post('/send-email', 'sendEmail');
 });
