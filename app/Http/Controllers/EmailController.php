@@ -17,33 +17,45 @@ class EmailController extends Controller
         return view('welcome');
     }
 
-    public function contact(Request $request){
-        $rules = [
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'subject' => 'required|string',
-            'mail' => 'required|string',
-        ];
+    public function contact(Request $request)
+{
+    $rules = [
+        'name' => 'required|string',
+        'email' => 'required|email',
+        'subject' => 'required|string',
+        'mail' => 'required|string',
+    ];
 
-        $messages = [
-            'name.required' => 'Nama harus diisi',
-            'email.required' => 'Alamat email harus diisi',
-            'email.email' => 'Alamat email harus valid',
-            'subject.required' => 'Subjek harus diisi',
-            'mail.required' => 'Pesan harus diisi',
-        ];
+    $messages = [
+        'name.required' => 'Nama harus diisi',
+        'email.required' => 'Alamat email harus diisi',
+        'email.email' => 'Alamat email harus valid',
+        'subject.required' => 'Subjek harus diisi',
+        'mail.required' => 'Pesan harus diisi',
+    ];
 
-        $request->validate($rules, $messages);
+    $validator = Validator::make($request->all(), $rules, $messages);
 
-        $name = $request->input('name');
-        $email = $request->input('email');
-        $subject = $request->input('subject');
-        $mail = $request->input('mail');
-
-        Mail::to('webcreativs2@gmail.com')->send(new ContactFormMail($name, $email, $subject, $mail));
-
-        return redirect()->back()->with('success', 'Your message has been sent, Thank you!')->with('redirected', true);
+    if ($validator->fails()) {
+        return response()->json([
+            'success' => false,
+            'errors' => $validator->errors(),
+        ], 422); // 422 is the HTTP status code for unprocessable entity
     }
+
+    $name = $request->input('name');
+    $email = $request->input('email');
+    $subject = $request->input('subject');
+    $mail = $request->input('mail');
+
+    Mail::to('webcreativs2@gmail.com')->send(new ContactFormMail($name, $email, $subject, $mail));
+
+    return response()->json([
+        'success' => true,
+        'message' => 'Your message has been sent, Thank you!',
+    ]);
+}
+
 
     public function storeEmail(Request $request)
     {

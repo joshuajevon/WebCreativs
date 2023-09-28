@@ -536,21 +536,19 @@
                         </div>
 
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
-                            <textarea name="mail" :value="old('mail')" id="mail" placeholder="Message" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium"></textarea>
+                            <textarea name="mail" :value="old('mail')" id="mail" placeholder="Message" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium h-40 xl:h-48 resize-none"></textarea>
                             <p id="error-message" class="text-xs sm:text-sm md:text-base text-red-800"></p>
                         </div>
 
-                        <button class="bg-custom-light-green hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/20%)_0_0)] rounded-2xl text-white p-2 sm:p-3 md:p-4 w-full font-semibold text-base sm:text-lg md:text-xl">Submit</button>
+                        <button id="contact-form-submit-button" type="submit" class="flex justify-center items-center bg-custom-light-green hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/20%)_0_0)] rounded-2xl text-white p-3 sm:p-3.5 md:p-4 w-full font-semibold text-base sm:text-lg md:text-xl">
+                            Submit
+                        </button>
 
                         <div class="flex flex-col gap-1 md:gap-2 w-full justify-center items-center">
-                            @if (session('success'))
-                            <p class="text-xs sm:text-sm md:text-base text-custom-light-green text-center font-medium">
-                                {{ session('success') }}
+                            <p id="success-message" class="text-xs sm:text-sm md:text-base text-custom-light-green text-center font-medium">
                             </p>
-                            @endif
-                            {{-- <p class="text-xs sm:text-sm md:text-base text-custom-light-green text-center font-medium">
-                                Your message has been sent, Thank you!
-                            </p> --}}
+                            <p id="fail-message" class="text-xs sm:text-sm md:text-base text-red-800 text-center font-medium">
+                            </p>
                         </div>
                     </form>
                 </div>
@@ -572,7 +570,7 @@
     <script src="{{ asset('js/contact-us.js') }}?t={{ env('VERSION_TIME') }}"></script>
 
     {{-- Auto scroll after submit contact form --}}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
             const redirected = {
@@ -587,6 +585,6 @@
             }
         });
 
-    </script>
+    </script> --}}
 </body>
 </html>
