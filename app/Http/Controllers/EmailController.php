@@ -79,7 +79,10 @@ class EmailController extends Controller
         $exists = Email::where('Email', $Email)->exists();
 
         if ($exists){
-            return response()->json(['exists' => $exists]);
+            return response()->json([
+                'status' => 'duplicate',
+                'message' => 'Email is already subscribed!'
+            ]);
         }
 
         Mail::to($Email)->send(new SendEmail());
@@ -88,7 +91,10 @@ class EmailController extends Controller
             'Email' => $request->Email
         ]);
 
-        return response()->json(["code" => 200]);
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Thanks for subscribing!'
+        ]);
     }
 
     public function sendEmail(Request $request)
