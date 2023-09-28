@@ -97,6 +97,7 @@ function contactUs(e) {
                     $("#form-contact-us")[0].reset();
 
                     // Display a success message to the user
+                    $("#contact-fail-message").text("");
                     $("#contact-success-message").text(response.message);
 
                     // Change submit button to default
@@ -105,6 +106,7 @@ function contactUs(e) {
                         .removeClass("opacity-50 pointer-events-none");
                 } else {
                     // Handle errors if necessary
+                    $("#contact-success-message").text("");
                     $("#contact-fail-message").text(
                         "An error occurred while submitting the form, please try again."
                     );
@@ -117,6 +119,7 @@ function contactUs(e) {
             },
             error: function () {
                 // Handle AJAX errors if necessary
+                $("#contact-success-message").text("");
                 $("#contact-fail-message").text(
                     "An error occurred while submitting the form, please try again."
                 );

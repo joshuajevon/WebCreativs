@@ -581,14 +581,14 @@
             <div class="flex flex-col gap-8 font-montserrat col-span-1">
                 <h1 class="flex gap-8 sm:gap-10 md:gap-12 text-base sm:text-md md:text-xl text-custom-light-green">Get the freshest news from us</h1>
 
-                <form id="form-subscribe" action="" class="flex flex-col w-full gap-4" onsubmit="subscribe(event)">
+                <form id="form-subscribe" method="POST" class="flex flex-col w-full gap-4" onsubmit="subscribe(event)">
                     <div class="flex gap-4">
                         <input type="text" name="Email" :value="old('Email')" id="subscribe-email" placeholder="Your email address..." class="bg-custom-light-green text-white p-3 xl:p-4 rounded-xl text-xs sm:text-sm md:text-base placeholder:text-white w-full" />
 
                         <button id="subscribe-submit-button" type="submit" class="bg-custom-lightest-green hover:bg-[linear-gradient(rgb(0_0_0/5%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] transition p-3 xl:p-4 px-6 xl:px-8 rounded-xl text-xs sm:text-sm md:text-base text-custom-dark-gray">Subscribe</button>
                     </div>
-                    <p id="error-subscribe" class="flex gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg text-red-800"></p>
-                    <p id="success-subscribe" class="flex gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg text-custom-light-green">Thanks for subscribing!</p>
+                    <p id="subscribe-fail-message" class="flex gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg text-red-800"></p>
+                    <p id="subscribe-success-message" class="flex gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg text-custom-light-green"></p>
                 </form>
             </div>
         </div>

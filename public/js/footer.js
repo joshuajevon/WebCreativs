@@ -3,30 +3,44 @@ function subscribe(e) {
 
     const inputEmail = $("#subscribe-email");
     let valueEmail = inputEmail.val();
-    const errorEmail = $("#error-subscribe");
+    const failEmail = $("#subscribe-fail-message");
+    const successEmail = $("#subscribe-success-message");
 
     const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 
-    let isEmailValid = false;
-
     // Check if email is empty
     if (valueEmail === "") {
-        errorEmail.text("Email cannot be empty");
-        isEmailValid = false;
+        failEmail.text("Email cannot be empty");
     } else {
         // check if email is valid format
         if (regexEmail.test(valueEmail)) {
             // Email is valid
-            errorEmail.text("");
-            isEmailValid = true;
+            // Check for duplicate email
+            (async () => {
+                await fetch("/api/store-email", {
+                    method: "POST",
+                    body: JSON.stringify(valueEmail),
+                    headers: {
+                        "Content-type":
+                            "application/json; image/png; charset=UTF-8",
+                    },
+                }).then((res) => {
+                    res.json().then((data) => {
+                        if (data.code == 200) {
+                            failEmail.text("");
+                            successEmail.text("Thanks for subscribing!");
+                        } else if (data.code == 400) {
+                            successEmail.text("");
+                            failEmail.text("Email is already subscribed!");
+                        }
+                    });
+                });
+            })();
+
+            failEmail.text("");
         } else {
             // Email is not valid
-            errorEmail.text("Email is not valid");
-            isEmailValid = false;
+            failEmail.text("Email is not valid");
         }
-    }
-
-    if (isEmailValid) {
-        // $("#form-subscribe").submit();
     }
 }
