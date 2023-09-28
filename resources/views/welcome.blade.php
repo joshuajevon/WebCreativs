@@ -540,14 +540,14 @@
                             <p id="error-message" class="text-xs sm:text-sm md:text-base text-red-800"></p>
                         </div>
 
-                        <button id="contact-form-submit-button" type="submit" class="flex justify-center items-center bg-custom-light-green hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/20%)_0_0)] rounded-2xl text-white p-3 sm:p-3.5 md:p-4 w-full font-semibold text-base sm:text-lg md:text-xl">
+                        <button id="contact-submit-button" type="submit" class="flex justify-center items-center bg-custom-light-green hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/20%)_0_0)] rounded-2xl text-white p-3 sm:p-3.5 md:p-4 w-full font-semibold text-base sm:text-lg md:text-xl">
                             Submit
                         </button>
 
-                        <div class="flex flex-col gap-1 md:gap-2 w-full justify-center items-center">
-                            <p id="success-message" class="text-xs sm:text-sm md:text-base text-custom-light-green text-center font-medium">
+                        <div class="flex w-full justify-center items-center text-xs sm:text-sm md:text-base">
+                            <p id="contact-success-message" class="text-custom-light-green text-center font-medium">
                             </p>
-                            <p id="fail-message" class="text-xs sm:text-sm md:text-base text-red-800 text-center font-medium">
+                            <p id="contact-fail-message" class="text-red-800 text-center font-medium">
                             </p>
                         </div>
                     </form>
@@ -559,11 +559,44 @@
 
     {{-- Footer --}}
     <footer class="c-container py-16">
-        <div class="c-container">
-            <div class="flex flex-col">
+        <div class="pb-8 border-b border-custom-light-green grid grid-cols-3 gap-8">
+            <div class="flex flex-col gap-8 col-span-2">
                 <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-44 sm:w-48 md:w-80">
+
+                <span class="flex flex-wrap gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg font-montserrat">
+
+                    <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">About Us</a>
+
+                    <a href="#what-we-do" class="transition-colors text-custom-light-green hover:text-custom-dark-green">What We Do</a>
+
+                    <a href="#work-process" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Work Process</a>
+
+                    <a href="#latest-project" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Projects</a>
+
+                    <a href="#our-team" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Our Team</a>
+
+                    <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
+                </span>
             </div>
-            <div></div>
+            <div class="flex flex-col gap-8 font-montserrat col-span-1">
+                <h1 class="flex gap-8 sm:gap-10 md:gap-12 text-base sm:text-md md:text-xl text-custom-light-green">Get the freshest news from us</h1>
+
+                <form id="form-subscribe" action="" class="flex flex-col w-full gap-4" onsubmit="subscribe(event)">
+                    <div class="flex gap-4">
+                        <input type="text" name="Email" :value="old('Email')" id="subscribe-email" placeholder="Your email address..." class="bg-custom-light-green text-white p-3 xl:p-4 rounded-xl text-xs sm:text-sm md:text-base placeholder:text-white w-full" />
+
+                        <button id="subscribe-submit-button" type="submit" class="bg-custom-lightest-green hover:bg-[linear-gradient(rgb(0_0_0/5%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] transition p-3 xl:p-4 px-6 xl:px-8 rounded-xl text-xs sm:text-sm md:text-base text-custom-dark-gray">Subscribe</button>
+                    </div>
+                    <p id="error-subscribe" class="flex gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg text-red-800"></p>
+                    <p id="success-subscribe" class="flex gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg text-custom-light-green">Thanks for subscribing!</p>
+                </form>
+            </div>
+        </div>
+
+        <div class="flex justify-between items-center font-montserrat pt-8 text-xs sm:text-sm md:text-base italic">
+            <p class="text-custom-dark-gray">Unlock the limitless possibilities of your online presence with <span class="font-bold text-custom-light-green">WebCreativs </span><br>- where excellence is just the beginning.</p>
+
+            <p class="text-custom-light-gray">© WebCreativs 2023. All right reserved</p>
         </div>
     </footer>
 
@@ -578,5 +611,6 @@
     <script src="{{ asset('js/work-process.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/latest-project.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/contact-us.js') }}?t={{ env('VERSION_TIME') }}"></script>
+    <script src="{{ asset('js/footer.js') }}?t={{ env('VERSION_TIME') }}"></script>
 </body>
 </html>
