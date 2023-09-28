@@ -557,6 +557,16 @@
         </div>
     </div>
 
+    {{-- Footer --}}
+    <footer class="c-container py-16">
+        <div class="c-container">
+            <div class="flex flex-col">
+                <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-44 sm:w-48 md:w-80">
+            </div>
+            <div></div>
+        </div>
+    </footer>
+
     {{-- Jquery --}}
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
 
@@ -568,23 +578,5 @@
     <script src="{{ asset('js/work-process.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/latest-project.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/contact-us.js') }}?t={{ env('VERSION_TIME') }}"></script>
-
-    {{-- Auto scroll after submit contact form --}}
-    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            const redirected = {
-                {
-                    session('redirected', 'false')
-                }
-            };
-            if (redirected) {
-                $('html, body').animate({
-                    scrollTop: $('#contact-us').offset().top
-                }, 1000);
-            }
-        });
-
-    </script> --}}
 </body>
 </html>
