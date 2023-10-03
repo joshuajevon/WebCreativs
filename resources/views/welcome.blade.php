@@ -16,7 +16,7 @@
 <body>
     <nav class="hidden xl:block c-container fixed z-50 w-full font-libre bg-custom-off-white">
         <div class="flex border-b border-custom-light-green justify-between items-center py-4">
-            <a href="/">
+            <a href="#hero">
                 <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-40">
             </a>
             <span class="flex justify-center items-center gap-16">
@@ -58,9 +58,9 @@
         </div>
     </nav>
 
-    <nav class="xl:hidden block c-container fixed z-50 w-full">
-        <div class="flex bg-custom-off-white justify-between items-center py-4 border-b border-custom-light-green">
-            <a href="/">
+    <nav class="xl:hidden block c-container fixed z-50 w-full bg-custom-off-white">
+        <div class="flex  justify-between items-center py-4 border-b border-custom-light-green">
+            <a href="#hero">
                 <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-40">
             </a>
 
@@ -77,7 +77,7 @@
 
     {{-- Mobile Links --}}
     <nav id="mobile-nav-links" class="c-container font-libre py-2 bg-custom-off-white hidden text-custom-light-green text-sm sm:text-base md:text-md fixed top-[83.39px] sm:top-[89.81px] md:top-[96.23px] left-0 z-40 w-full shadow-lg">
-        <a href="#home" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Home</a>
+        <a href="#hero" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Home</a>
 
         <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">About Us</a>
 
@@ -412,43 +412,35 @@
     <div id="latest-project" class="bg-custom-off-white flex flex-col justify-center items-center py-48 pb-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16 relative">
         <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute -top-[50rem] z-10 rotate-180">
 
-        <div class="c-container z-20 flex flex-col justify-center items-center gap-8 sm:gap-10 md:gap-12 xl:gap-16">
+        <div class="c-container z-20 flex flex-col justify-center items-center gap-5">
             <span class="relative ">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Latest Project.</h1>
                 <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
             </span>
 
             <div class="">
-                <h1 class="text-custom-light-green font-montserrat font-bold text-base sm:text-lg md:text:xl xl:text-2xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose">asetaset.com</h1>
+                <h1 class="text-custom-light-green font-montserrat font-bold text-base sm:text-lg md:text:xl xl:text-2xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose mt-6">asetaset.com</h1>
             </div>
+
+            <div class="flex justify-center">
+                <img src="{{ asset('assets/latest-project/project-1.png') }}?t={{ env('VERSION_TIME') }}" alt="" class="w-5/6">
+            </div>
+
 
             <div class="">
                 <a href="https://asetaset.com/" target="_blank" ref="noopener noreferrer" class="text-sm font-montserrat text-custom-light-green font-bold underline">www.asetaset.com</a>
             </div>
         </div>
 
-        {{-- <section id="image-carousel" class="splide" aria-label="Beautiful Images">
-            <div class="splide__track">
-                <ul class="splide__list">
-                    <li class="splide__slide flex justify-center">
-                        <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
-        </li>
-        <li class="splide__slide flex justify-center">
-            <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
-        </li>
-        <li class="splide__slide flex justify-center">
-            <img src="{{asset("assets/latest-project/project-1.png")}}" alt="project-1">
-        </li>
-        </ul>
-    </div>
-    </section> --}}
+        
 
-    <div class="c-container font-montserrat w-4/6 xl:w-[800px] flex flex-col gap-4 z-20">
-        <p class="font-bold text-5xl -mb-14 -ml-14">“</p>
-        <p class="font-medium text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
-        <p class="text-custom-dark-blue text-xs md:text-base">Wilhelmus Rio, Founder of asetaset.com</p>
-        <p class="font-bold text-5xl self-end -mt-8 -mr-6">”</p>
-    </div>
+
+        <div class="c-container font-montserrat w-4/6 xl:w-[800px] flex flex-col gap-4 z-20">
+            <p class="font-bold text-5xl -mb-14 -ml-14">“</p>
+            <p class="font-medium text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
+            <p class="text-custom-dark-blue text-xs md:text-base">Wilhelmus Rio, Founder of asetaset.com</p>
+            <p class="font-bold text-5xl self-end -mt-8 -mr-6">”</p>
+        </div>
     </div>
 
     {{-- Our Team --}}
@@ -483,7 +475,7 @@
                     <img src="{{asset("assets/our-team/gama.svg")}}" alt="gama" class="w-48 md:w-54">
                 </div>
                 <h2 class="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Gamaliel Satria D.</h2>
-                <h2 class="font-semibold opacity-50 text-xs md:text-sm lg:text-base xl:text-lg">Founder</h2>
+                <h2 class="font-semibold opacity-50 text-xs md:text-sm lg:text-base xl:text-lg">Project Manager</h2>
                 <div class="flex justify-center items-center gap-4">
                     <a href="">
                         <img src="{{asset("assets/our-team/icon-linked-in.svg")}}" alt="linked-in" class="w-7">
@@ -586,7 +578,7 @@
 
     {{-- Footer --}}
     <footer class="c-container py-8 lg:py-16">
-        <div class="pb-8 border-b border-custom-light-green flex flex-col lg:flex-row justify-between gap-16 lg:gap-32">
+        <div class="pb-5 border-b border-custom-light-green flex flex-col lg:flex-row justify-between gap-10 lg:gap-32">
             <div class="flex flex-col gap-8">
                 <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80">
 
@@ -615,12 +607,12 @@
 
                         <button id="subscribe-submit-button" type="submit" class="bg-custom-lightest-green hover:bg-[linear-gradient(rgb(0_0_0/5%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] transition p-3 xl:p-4 px-6 xl:px-8 rounded-xl text-xs md:text-sm text-custom-dark-gray">Subscribe</button>
                     </div>
-                    <p id="subscribe-validation-message" class="flex items-center text-sm md:text-base"></p>
+                    <p id="subscribe-validation-message" class="flex items-center text-xs md:text-xs"></p>
                 </form>
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-center font-montserrat pt-8 text-xs md:text-sm italic">
+        <div class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-center font-montserrat pt-6 text-xs md:text-sm italic">
             <p class="text-custom-dark-gray">Unlock the limitless possibilities of your online presence with <span class="font-bold text-custom-light-green">WebCreativs </span><br>- where excellence is just the beginning.</p>
 
             <p class="text-custom-light-gray">© WebCreativs 2023. All right reserved</p>
