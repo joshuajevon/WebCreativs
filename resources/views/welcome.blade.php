@@ -14,39 +14,66 @@
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="hidden xl:flex c-container justify-between items-center py-4 fixed z-50 w-full shadow-lg font-libre bg-custom-off-white">
-        <a href="/">
-            <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-40">
-        </a>
-        <span class="flex justify-center items-center gap-16">
-            <span class="flex justify-center items-center gap-6 sm:gap-8 md:gap-10 text-sm sm:text-base md:text-md">
-                <a href="#hero" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Home</a>
+    <nav class="hidden xl:block c-container fixed z-50 w-full font-libre bg-custom-off-white">
+        <div class="flex border-b border-custom-light-green justify-between items-center py-4">
+            <a href="/">
+                <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-40">
+            </a>
+            <span class="flex justify-center items-center gap-16">
+                <span class="flex justify-center items-center gap-6 sm:gap-8 md:gap-10 text-sm sm:text-base md:text-md">
+                    <a href="#hero" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Home</a>
 
-                <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">About Us</a>
+                    <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">About Us</a>
 
-                <a href="#latest-project" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Projects</a>
+                    <a href="#latest-project" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Projects</a>
 
-                <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
+                    <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
 
-                <a href="/id" class="transition-colors text-custom-light-green hover:text-custom-dark-green">EN</a>
+                    <div class="relative transition-colors text-custom-light-green hover:text-custom-dark-green cursor-pointer" onclick="toggleLanguageDropdown()">
+                        <div class="inline-flex items-center overflow-hidden">
+                            <p>
+                                EN
+                            </p>
+
+                            <svg id="language-dropdown-arrow" xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4 transition" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+
+                        <div id="language-dropdown" class="hidden absolute end-0 z-10 mt-2 rounded-md border border-custom-light-green bg-custom-off-white shadow-lg" role="menu">
+                            <div class="p-2">
+                                <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
+                                    EN
+                                </a>
+
+                                <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
+                                    ID
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </span>
             </span>
-        </span>
+        </div>
     </nav>
 
-    <nav class="flex xl:hidden c-container bg-custom-off-white justify-between items-center py-4 fixed z-50 w-full shadow-lg">
+    <nav class="xl:hidden block c-container fixed z-50 w-full">
+        <div class="flex bg-custom-off-white justify-between items-center py-4 border-b border-custom-light-green">
+            <a href="/">
+                <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-40">
+            </a>
 
-        <a href="/">
-            <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-40">
-        </a>
-
-        <button class="block rounded bg-custom-red p-3 transition" onclick="toggleNavbar()">
-            <div class="h-6 w-6 relative">
-                <span id="nav-icon-top" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-x-0 mx-auto top-0.5 transition"></span>
-                <span id="nav-icon-mid" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-0 m-auto transition"></span>
-                <span id="nav-icon-bottom" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-x-0 mx-auto bottom-0.5 transition"></span>
-            </div>
-        </button>
+            <button class="block rounded bg-custom-red p-3 transition" onclick="toggleNavbar()">
+                <div class="h-6 w-6 relative">
+                    <span id="nav-icon-top" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-x-0 mx-auto top-0.5 transition"></span>
+                    <span id="nav-icon-mid" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-0 m-auto transition"></span>
+                    <span id="nav-icon-bottom" class="w-6 h-[0.125rem] bg-custom-light-green rounded-full absolute inset-x-0 mx-auto bottom-0.5 transition"></span>
+                </div>
+            </button>
+        </div>
     </nav>
+
 
     {{-- Mobile Links --}}
     <nav id="mobile-nav-links" class="c-container font-libre py-2 bg-custom-off-white hidden text-custom-light-green text-sm sm:text-base md:text-md fixed top-[83.39px] sm:top-[89.81px] md:top-[96.23px] left-0 z-40 w-full shadow-lg">
@@ -416,12 +443,12 @@
     </div>
     </section> --}}
 
-     <div class="c-container font-montserrat w-4/6 xl:w-[800px] flex flex-col gap-4 z-20">
-            <p class="font-bold text-5xl -mb-14 -ml-14">“</p>
-            <p class="font-medium text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
-            <p class="text-custom-dark-blue text-xs md:text-base">Wilhelmus Rio, Founder of asetaset.com</p>
-            <p class="font-bold text-5xl self-end -mt-8 -mr-6">”</p>
-        </div> 
+    <div class="c-container font-montserrat w-4/6 xl:w-[800px] flex flex-col gap-4 z-20">
+        <p class="font-bold text-5xl -mb-14 -ml-14">“</p>
+        <p class="font-medium text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
+        <p class="text-custom-dark-blue text-xs md:text-base">Wilhelmus Rio, Founder of asetaset.com</p>
+        <p class="font-bold text-5xl self-end -mt-8 -mr-6">”</p>
+    </div>
     </div>
 
     {{-- Our Team --}}
@@ -558,12 +585,12 @@
     </div>
 
     {{-- Footer --}}
-    <!-- <footer class="c-container py-16">
-        <div class="pb-8 border-b border-custom-light-green grid grid-cols-3 gap-8">
-            <div class="flex flex-col gap-8 col-span-2">
-                <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-44 sm:w-48 md:w-80">
+    <footer class="c-container py-8 lg:py-16">
+        <div class="pb-8 border-b border-custom-light-green flex flex-col lg:flex-row justify-between gap-16 lg:gap-32">
+            <div class="flex flex-col gap-8">
+                <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80">
 
-                <span class="flex flex-wrap gap-8 sm:gap-10 md:gap-12 text-xs sm:text-sm md:text-base font-montserrat">
+                <span class="flex flex-wrap gap-x-8 sm:gap-x-10 md:gap-x-12 gap-y-4 text-xs sm:text-sm md:text-base font-montserrat">
 
                     <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">About Us</a>
 
@@ -578,27 +605,27 @@
                     <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
                 </span>
             </div>
-            <div class="flex flex-col gap-8 font-montserrat col-span-1">
-                <h1 class="flex gap-8 sm:gap-10 md:gap-12 text-sm sm:text-base md:text-lg text-custom-light-green">Get the freshest news from us</h1>
+            <div class="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6 font-montserrat w-full lg:w-96 flex-none">
+                <h1 class="text-sm sm:text-base md:text-lg text-custom-light-green">Get the freshest news from us</h1>
 
-                <form id="form-subscribe" method="POST" action="{{ route('storeEmail') }}" class="flex flex-col w-full gap-4" onsubmit="subscribe(event)">
+                <form id="form-subscribe" method="POST" action="{{ route('storeEmail') }}" class="flex flex-col gap-4 w-full" onsubmit="subscribe(event)">
                     @csrf
                     <div class="flex gap-4">
                         <input type="text" name="Email" :value="old('Email')" id="subscribe-email" placeholder="Your email address..." class="bg-custom-light-green text-white p-3 xl:p-4 rounded-xl text-xs md:text-sm placeholder:text-white w-full" />
 
                         <button id="subscribe-submit-button" type="submit" class="bg-custom-lightest-green hover:bg-[linear-gradient(rgb(0_0_0/5%)_0_0)] active:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)] transition p-3 xl:p-4 px-6 xl:px-8 rounded-xl text-xs md:text-sm text-custom-dark-gray">Subscribe</button>
                     </div>
-                    <p id="subscribe-validation-message" class="flex items-center text-sm sm:text-base md:text-lg"></p>
+                    <p id="subscribe-validation-message" class="flex items-center text-sm md:text-base"></p>
                 </form>
             </div>
         </div>
 
-        <div class="flex justify-between items-center font-montserrat pt-8 text-xs md:text-sm italic">
+        <div class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-center font-montserrat pt-8 text-xs md:text-sm italic">
             <p class="text-custom-dark-gray">Unlock the limitless possibilities of your online presence with <span class="font-bold text-custom-light-green">WebCreativs </span><br>- where excellence is just the beginning.</p>
 
             <p class="text-custom-light-gray">© WebCreativs 2023. All right reserved</p>
         </div>
-    </footer> -->
+    </footer>
 
     {{-- Jquery --}}
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>

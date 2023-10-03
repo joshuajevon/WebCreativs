@@ -42,3 +42,9 @@ window.addEventListener(
     },
     true
 );
+
+// LAGNUAGE DROPDOWN
+function toggleLanguageDropdown() {
+    $("#language-dropdown-arrow").toggleClass("rotate-180");
+    $("#language-dropdown").slideToggle();
+}
