@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Jobs\ProcessNews;
 use App\Mail\ContactFormMail;
 use App\Mail\SendEmail;
 use App\Models\Email;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Mail;
 
-class EmailController extends Controller
+class EmailIdController extends Controller
 {
-    public function home(){
-        return view('welcome');
+    public function homeId(){
+        return view('welcome-id');
     }
 
     public function contact(Request $request)
@@ -52,7 +52,7 @@ class EmailController extends Controller
 
     return response()->json([
         'success' => true,
-        'message' => 'Your message has been sent, Thank you!',
+        'message' => 'Pesan anda sudah terkirim. Terima kasih!',
     ]);
 }
 
@@ -77,7 +77,7 @@ class EmailController extends Controller
         if ($exists){
             return response()->json([
                 'status' => 'duplicate',
-                'message' => 'Email is already subscribed!'
+                'message' => 'Alamat email sudah berlangganan!'
             ]);
         }
 
@@ -89,26 +89,7 @@ class EmailController extends Controller
 
         return response()->json([
             'status' => 'success',
-            'message' => 'Thanks for subscribing!'
+            'message' => 'Terima kasih telah berlangganan!'
         ]);
     }
-
-    public function sendEmail(Request $request)
-    {
-        if ($request->password != "ayam") {
-            return response()->json(400);
-        }
-
-        $emails = Email::pluck('Email');
-
-        foreach ($emails as $email) {
-            ProcessNews::dispatch($email);
-        }
-
-        Artisan::call('queue:work');
-
-        return response()->json(200);
-    }
-
-
 }

@@ -561,7 +561,7 @@
 
                 {{-- Contact Form --}}
                 <div class="col-span-1">
-                    <form id="form-contact-us" method="POST" action="{{ route('contact') }}" class="font-montserrat flex-1 flex flex-col gap-6 sm:gap-7 md:gap-8 justify-center items-center w-full" onsubmit="contactUs(event)">
+                    <form id="form-contact-us" method="POST" action="{{ route('contactId') }}" class="font-montserrat flex-1 flex flex-col gap-6 sm:gap-7 md:gap-8 justify-center items-center w-full" onsubmit="contactUs(event)">
                         @csrf
                         <div class="flex flex-col gap-1 md:gap-2 w-full">
                             <input type="text" name="name" :value="old('name')" id="name" placeholder="Nama" class="bg-transparent p-4 xl:p-5 border border-custom-light-green rounded-2xl text-xs sm:text-sm md:text-base placeholder:font-bold placeholder:text-custom-light-green focus:border-2 font-medium" />
@@ -622,7 +622,7 @@
             <div class="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6 font-montserrat w-full lg:w-96 flex-none">
                 <h1 class="text-sm sm:text-base md:text-lg text-custom-light-green">Dapatkan berita terbaru dari kami</h1>
 
-                <form id="form-subscribe" method="POST" action="{{ route('storeEmail') }}" class="flex flex-col gap-4 w-full" onsubmit="subscribe(event)">
+                <form id="form-subscribe" method="POST" action="{{ route('storeEmailId') }}" class="flex flex-col gap-4 w-full" onsubmit="subscribe(event)">
                     @csrf
                     <div class="flex gap-4">
                         <input type="text" name="Email" :value="old('Email')" id="subscribe-email" placeholder="Alamat email Anda..." class="bg-custom-light-green text-white p-3 xl:p-4 rounded-xl text-xs md:text-sm placeholder:text-white w-full" />
@@ -651,8 +651,8 @@
     <script src="{{ asset('js/navbar.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/work-process.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/latest-project.js') }}?t={{ env('VERSION_TIME') }}"></script>
-    <script src="{{ asset('js/contact-us.js') }}?t={{ env('VERSION_TIME') }}"></script>
-    <script src="{{ asset('js/footer.js') }}?t={{ env('VERSION_TIME') }}"></script>
+    <script src="{{ asset('js/contact-us-id.js') }}?t={{ env('VERSION_TIME') }}"></script>
+    <script src="{{ asset('js/footer-id.js') }}?t={{ env('VERSION_TIME') }}"></script>
 </body>
 
 <script>

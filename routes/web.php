@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\EmailIdController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,10 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// eng
 Route::get('/', [EmailController::class, 'home'])->name('home');
 
 Route::post('/contact', [EmailController::class, 'contact'])->name('contact');
 
 Route::post('/store-email', [EmailController::class, 'storeEmail'])->name('storeEmail');
 
-Route::get('/id', [EmailController::class, 'homeId'])->name('homeId');
+
+// indo
+Route::get('/id', [EmailIdController::class, 'homeId'])->name('homeId');
+
+Route::post('/contact-id', [EmailIdController::class, 'contact'])->name('contactId');
+
+Route::post('/store-email-id', [EmailIdController::class, 'storeEmail'])->name('storeEmailId');
