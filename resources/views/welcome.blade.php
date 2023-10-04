@@ -29,18 +29,18 @@
 
                     <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">Contact Us</a>
 
-                    <div class="relative transition-colors text-custom-light-green hover:text-custom-dark-green cursor-pointer" onclick="toggleLanguageDropdown()">
+                    <div class="relative transition-colors text-custom-light-green hover:text-custom-dark-green cursor-pointer" onclick="toggleWebLanguageDropdown()">
                         <div class="inline-flex items-center overflow-hidden">
                             <p>
                                 EN
                             </p>
 
-                            <svg id="language-dropdown-arrow" xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4 transition" viewBox="0 0 20 20" fill="currentColor">
+                            <svg id="language-dropdown-arrow-web" xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4 transition" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
                             </svg>
                         </div>
 
-                        <div id="language-dropdown" class="hidden absolute end-0 z-10 mt-2 rounded-md border border-custom-light-green bg-custom-off-white shadow-lg" role="menu">
+                        <div id="language-dropdown-web" class="hidden absolute end-0 z-10 mt-2 rounded-md border border-custom-light-green bg-custom-off-white shadow-lg" role="menu">
                             <div class="p-2">
                                 <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
                                     EN
@@ -85,7 +85,29 @@
 
         <a href="#contact-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">Contact Us</a>
 
-        <a href="" class="transition-colors text-custom-light-green hover:text-custom-dark-green block py-3">EN</a>
+        <div class="relative transition-colors text-custom-light-green hover:text-custom-dark-green cursor-pointer py-3" onclick="toggleMobileLanguageDropdown()">
+            <div class="inline-flex items-center overflow-hidden">
+                <p>
+                    EN
+                </p>
+
+                <svg id="language-dropdown-arrow-mobile" xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4 transition" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </div>
+
+            <div id="language-dropdown-mobile" class="hidden absolute start-0 z-10 mt-2 rounded-md border border-custom-light-green bg-custom-off-white shadow-lg" role="menu">
+                <div class="p-2">
+                    <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
+                        EN
+                    </a>
+
+                    <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
+                        ID
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
 
     {{-- Hero --}}
@@ -432,7 +454,7 @@
             </div>
         </div>
 
-        
+
 
 
         <div class="c-container font-montserrat w-4/6 xl:w-[800px] flex flex-col gap-4 z-20">

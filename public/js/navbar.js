@@ -36,15 +36,24 @@ window.addEventListener(
             menuIconBot.addClass("inset-x-0 mx-auto bottom-0.5");
             $("#nav-icon-mid").removeClass("opacity-0");
             $("#mobile-nav-links").slideUp();
-            // mobileBackground.fadeOut();
+            $("#language-dropdown-arrow-web").removeClass("rotate-180");
+            $("#language-dropdown-web").slideUp();
+            $("#language-dropdown-arrow-mobile").removeClass("rotate-180");
+            $("#language-dropdown-mobile").slideUp();
             isNavbarOpen = false;
         }
     },
     true
 );
 
-// LAGNUAGE DROPDOWN
-function toggleLanguageDropdown() {
-    $("#language-dropdown-arrow").toggleClass("rotate-180");
-    $("#language-dropdown").slideToggle();
+// LANGUAGE DROPDOWN WEB
+function toggleWebLanguageDropdown() {
+    $("#language-dropdown-arrow-web").toggleClass("rotate-180");
+    $("#language-dropdown-web").slideToggle();
+}
+
+// LANGUAGE DROPDOWN MOBILE
+function toggleMobileLanguageDropdown() {
+    $("#language-dropdown-arrow-mobile").toggleClass("rotate-180");
+    $("#language-dropdown-mobile").slideToggle();
 }
