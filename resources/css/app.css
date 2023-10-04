@@ -69,3 +69,39 @@ button.splide__pagination__page.is-active {
         @apply px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24;
     }
 }
+
+@keyframes bounce-hero {
+    0%, 100% {
+        transform: translateY(5%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: translateY(-5%);
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+}
+.bounce-hero{
+    animation: bounce-hero 14s infinite;
+}
+
+@keyframes bounce-hero-2 {
+    0%, 100% {
+        transform: translateY(-5%);
+        animation-timing-function: cubic-bezier(0.8,0,1,1);
+    }
+    50% {
+        transform: translateY(5%);
+        animation-timing-function: cubic-bezier(0,0,0.2,1);
+    }
+}
+.bounce-hero-2{
+    animation: bounce-hero-2 15s infinite;
+}
+
+/* CSS: Apply the initial styles to each content container */
+.content-container {
+    opacity: 0;
+    transform: translateX(-20px); /* Optional: Start off-screen to the left */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+

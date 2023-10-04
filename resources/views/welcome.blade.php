@@ -13,7 +13,7 @@
     {{-- Splide JS --}}
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-custom-off-white">
     <nav class="hidden xl:block c-container fixed z-50 w-full font-libre bg-custom-off-white">
         <div class="flex border-b border-custom-light-green justify-between items-center py-4">
             <a href="#hero">
@@ -42,11 +42,11 @@
 
                         <div id="language-dropdown-web" class="hidden absolute end-0 z-10 mt-2 rounded-md border border-custom-light-green bg-custom-off-white shadow-lg" role="menu">
                             <div class="p-2">
-                                <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
+                                <a href="/" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
                                     EN
                                 </a>
 
-                                <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
+                                <a href="/id" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
                                     ID
                                 </a>
                             </div>
@@ -102,7 +102,7 @@
                         EN
                     </a>
 
-                    <a href="#" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
+                    <a href="/id" class="block rounded-lg px-4 py-2 hover:bg-[linear-gradient(rgb(0_0_0/10%)_0_0)]" role="menuitem">
                         ID
                     </a>
                 </div>
@@ -116,7 +116,7 @@
 
         <div class="flex md:gap-6 lg:gap-16 justify-center items-center z-20">
             <div class="hidden md:block">
-                <img src="{{ asset('assets/hero/person-1.svg') }}?t={{ env('VERSION_TIME') }}" alt="person-1" class="md:w-[18rem] lg:w-[28rem]">
+                <img src="{{ asset('assets/hero/person-1.svg') }}?t={{ env('VERSION_TIME') }}" alt="person-1" class="md:w-[18rem] lg:w-[28rem] bounce-hero">
             </div>
 
             <div class="flex flex-col gap-8 justify-center items-center">
@@ -134,7 +134,7 @@
             </div>
 
             <div class="hidden md:block">
-                <img src="{{ asset('assets/hero/person-2.svg') }}?t={{ env('VERSION_TIME') }}" alt="person-2" class="md:w-[18rem] lg:w-[28rem]">
+                <img src="{{ asset('assets/hero/person-2.svg') }}?t={{ env('VERSION_TIME') }}" alt="person-2" class="md:w-[18rem] lg:w-[28rem] bounce-hero-2">
             </div>
         </div>
 
@@ -164,7 +164,7 @@
     </div>
 
     {{-- About Us --}}
-    <div id="about-us" class="c-container min-h-screen flex justify-center items-center bg-custom-off-white py-32">
+    <div id="about-us" class="content-container c-container min-h-screen flex justify-center items-center bg-custom-off-white py-32">
         <div class="c-container flex justify-center items-center gap-28 z-20">
             <div class="hidden xl:flex flex-col justify-center items-center z-20">
                 <img src="{{ asset('assets/logo/logo-icon-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-[10rem] xl:w-[10rem] 2xl:w-[10rem]">
@@ -186,7 +186,7 @@
 
     {{-- What we do --}}
     <div id="what-we-do" class="c-container min-h-screen bg-custom-lightest-green flex flex-col py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16">
-        <div class="flex flex-col items-end gap-2">
+        <div class="flex flex-col items-end gap-2 content-container ">
             <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">What We Do?</h1>
 
             <p class="font-montserrat font-medium text-end text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">At <span class="font-bold text-custom-dark-green">WebCreativs</span>, we offer a wide range of services to cater to your diverse needs, including:</p>
@@ -198,21 +198,21 @@
 
                 <h1 class="font-bold text-sm sm:text-base md:text-lg xl:text-xl">Personal Website</h1>
 
-                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">We create personalized websites that encompass personal portfolios, blogs, and more. These websites serve as a comprehensive online platform to showcase your skills, experiences, and insights</p>
+                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">We create personalized websites that encompass personal portfolios, blogs, and more. These websites serve as a comprehensive online platform to showcase your skills, experiences, and insights.</p>
             </div>
             <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/company-profile.svg') }}?t={{ env('VERSION_TIME') }}" alt="company-profile" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-sm sm:text-base md:text-lg xl:text-xl">Company Profile</h1>
 
-                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">We develop professional company profiles that showcase your business's identity, values, and achievements, helping you make a strong impression on potential clients and partners</p>
+                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">We develop professional company profiles that showcase your business's identity, values, and achievements, helping you make a strong impression on potential clients and partners.</p>
             </div>
             <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/landing-page.svg') }}?t={{ env('VERSION_TIME') }}" alt="landing-page" class="h-36 sm:h-40 md:h-44 xl:h-48">
 
                 <h1 class="font-bold text-sm sm:text-base md:text-lg xl:text-xl">Landing Page</h1>
 
-                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">Our expertly designed landing pages are tailored to capture the attention of your target audience and drive conversions effectively</p>
+                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">Our expertly designed landing pages are tailored to capture the attention of your target audience and drive conversions effectively.</p>
             </div>
             <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/e-learning.svg') }}?t={{ env('VERSION_TIME') }}" alt="e-learning" class="h-36 sm:h-40 md:h-44 xl:h-48">
@@ -226,7 +226,7 @@
 
                 <h1 class="font-bold text-sm sm:text-base md:text-lg xl:text-xl">E-Commerce</h1>
 
-                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">We create fully functional e-commerce websites that allow you to showcase and sell your products or services online, providing a seamless shopping experience for your customers</p>
+                <p class="font-medium text-center text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray -mt-6">We create fully functional e-commerce websites that allow you to showcase and sell your products or services online, providing a seamless shopping experience for your customers.</p>
             </div>
             <div class="bg-white xl:bg-custom-off-white xl:hover:bg-white text-custom-dark-green flex flex-col items-center gap-6 sm:gap-8 md:gap-10 xl:gap-12 p-10 sm:p-12 md:p-14 xl:p-16 rounded-xl transition xl:hover:scale-105 font-montserrat w-72 sm:w-80 md:w-96 xl:w-auto flex-none">
                 <img src="{{ asset('assets/what-we-do/many-more.svg') }}?t={{ env('VERSION_TIME') }}" alt="many-more" class="h-36 sm:h-40 md:h-44 xl:h-48">
@@ -241,7 +241,7 @@
 
     {{-- Work Process --}}
     <div id="work-process" class="c-container bg-custom-off-white flex flex-col justify-center items-center py-32 gap-8 sm:gap-10 md:gap-12 xl:gap-24">
-        <div class="c-container flex flex-col items-start w-full gap-8 z-20">
+        <div class="content-container c-container flex flex-col items-start w-full gap-8 z-20">
             <span class="relative">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Work Process.</h1>
                 <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 bottom-0"></span>
@@ -252,7 +252,7 @@
             </p>
         </div>
 
-        <div id="work-process-selectors" class="w-full flex justify-center items-center gap-2 md:gap-4 xl:gap-6 flex-wrap z-20">
+        <div id="work-process-selectors" class="content-container w-full flex justify-center items-center gap-2 md:gap-4 xl:gap-6 flex-wrap z-20">
             <div class="active work-process-selector flex justify-center items-center rounded-full p-2 sm:p-3 md:p-4 lg:p-5 xl:p-6 bg-white text-custom-light-green hover:bg-custom-light-green/30 shadow-[0px_3.13402px_3.13402px_0px_#5F6342] cursor-pointer transition" onclick="changeWorkProcess(this)" data-work-process="1">
                 <svg class="w-4 sm:w-4 md:w-6 lg:w-8 xl:w-10 aspect-square" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule=" evenodd" clip-rule="evenodd" d="M2.11989 4.3838H5.78226V8.04617H20.4317V4.3838H24.0942V7.13058H25.9253V2.55261H20.2755C19.8983 1.48578 18.881 0.721436 17.6849 0.721436H8.52904C7.33307 0.721436 6.31563 1.48578 5.93855 2.55261H0.288696V31.8516H25.9253V26.358H24.0942V30.0204H2.11989V4.3838ZM7.61345 6.215V3.46822C7.61345 2.96253 8.02337 2.55261 8.52904 2.55261H17.6849C18.1907 2.55261 18.6006 2.96253 18.6006 3.46822V6.215H7.61345Z" fill="currentColor" />
@@ -325,7 +325,7 @@
             </div>
         </div>
 
-        <div class="c-container z-20">
+        <div class="c-container z-20 content-container">
             <div class="work-process-detail" data-work-process="1">
                 <div class="c-container w-full flex flex-col xl:flex-row justify-center items-center bg-white p-6 sm:p-16 md:p-20 lg:p-24 xl:p-28 border border-custom-dark-green rounded-3xl gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-32">
                     <div class="text-custom-light-green">
@@ -431,25 +431,25 @@
     </div>
 
     {{-- Latest Project --}}
-    <div id="latest-project" class="bg-custom-off-white flex flex-col justify-center items-center py-48 pb-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16 relative">
+    <div id="latest-project" class=" bg-custom-off-white flex flex-col justify-center items-center py-20 md:py-32 lg:py-48 pb-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16 relative">
         <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute -top-[50rem] z-10 rotate-180">
 
-        <div class="c-container z-20 flex flex-col justify-center items-center gap-5">
-            <span class="relative ">
+        <div class="content-container  c-container z-20 flex flex-col justify-center items-center gap-5">
+            <span class="relative content-container ">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Latest Project.</h1>
                 <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
             </span>
 
-            <div class="">
+            <div class="content-container ">
                 <h1 class="text-custom-light-green font-montserrat font-bold text-base sm:text-lg md:text:xl xl:text-2xl leading-loose sm:leading-loose md:leading-loose xl:leading-loose mt-6">asetaset.com</h1>
             </div>
 
-            <div class="flex justify-center">
+            <div class="flex justify-center content-container ">
                 <img src="{{ asset('assets/latest-project/project-1.png') }}?t={{ env('VERSION_TIME') }}" alt="" class="w-5/6">
             </div>
 
 
-            <div class="">
+            <div class="content-container ">
                 <a href="https://asetaset.com/" target="_blank" ref="noopener noreferrer" class="text-sm font-montserrat text-custom-light-green font-bold underline">www.asetaset.com</a>
             </div>
         </div>
@@ -457,7 +457,7 @@
 
 
 
-        <div class="c-container font-montserrat w-4/6 xl:w-[800px] flex flex-col gap-4 z-20">
+        <div class="c-container font-montserrat w-4/6 xl:w-[800px] flex flex-col gap-4 z-20 content-container ">
             <p class="font-bold text-5xl -mb-14 -ml-14">“</p>
             <p class="font-medium text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray italic">WebCreativs was the best choice for our online presence. They delivered a stunning, user-friendly site, supported us consistently, and adapted to our needs, all at a reasonable price. Our vision became a digital reality, thanks to their excellence in web development.</p>
             <p class="text-custom-dark-blue text-xs md:text-base">Wilhelmus Rio, Founder of asetaset.com</p>
@@ -467,12 +467,12 @@
 
     {{-- Our Team --}}
     <div id="our-team" class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
-        <span class="relative">
+        <span class="relative content-container ">
             <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Our Team.</h1>
             <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
         </span>
 
-        <div class="flex flex-col md:flex-row justify-center gap-16 sm:gap-20 md:gap-24 lg:gap-28 xl:gap-32 2xl:gap-36 w-full c-container text-center md:items-start">
+        <div class="content-container flex flex-col md:flex-row justify-center gap-16 sm:gap-20 md:gap-24 lg:gap-28 xl:gap-32 2xl:gap-36 w-full c-container text-center md:items-start">
             <div class="flex flex-col justify-center items-center font-montserrat gap-4 text-2xl ">
                 <div>
                     <img src="{{asset("assets/our-team/christopher.svg")}}" alt="christopher" class="w-38 md:w-54">
@@ -535,13 +535,13 @@
     {{-- Contact Us --}}
     <div id="contact-us" class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
         <div class="c-container flex flex-col items-start w-full gap-8 z-20">
-            <span class="relative">
+            <span class="relative content-container ">
                 <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Contact Us.</h1>
                 <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 bottom-0"></span>
             </span>
 
             <div class="grid grid-cols-1 xl:grid-cols-2 gap-16">
-                <div class="col-span-1 flex flex-col gap-8">
+                <div class="col-span-1 flex flex-col gap-8 content-container ">
                     <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-32 sm:w-36 md:w-64">
 
                     <p class="font-montserrat font-medium text-xs sm:text-sm md:text-base xl:text-lg leading-loose sm:leading-loose md:leading-loose xl:leading-loose text-custom-dark-gray z-20">
@@ -604,7 +604,7 @@
             <div class="flex flex-col gap-8">
                 <img src="{{ asset('assets/logo/logo-horizontal-green.svg') }}?t={{ env('VERSION_TIME') }}" alt="logo" class="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-80">
 
-                <span class="flex flex-wrap gap-x-8 sm:gap-x-10 md:gap-x-12 gap-y-4 text-xs sm:text-sm md:text-base font-montserrat">
+                <span class="flex flex-wrap gap-x-8 sm:gap-x-10 md:gap-x-12 gap-y-4 text-xs sm:text-sm md:text-base font-montserrat content-container ">
 
                     <a href="#about-us" class="transition-colors text-custom-light-green hover:text-custom-dark-green">About Us</a>
 
@@ -634,7 +634,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-center font-montserrat pt-6 text-xs md:text-sm italic">
+        <div class="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-center font-montserrat pt-6 text-xs md:text-sm italic content-container ">
             <p class="text-custom-dark-gray">Unlock the limitless possibilities of your online presence with <span class="font-bold text-custom-light-green">WebCreativs </span><br>- where excellence is just the beginning.</p>
 
             <p class="text-custom-light-gray">© WebCreativs 2023. All right reserved</p>
@@ -654,4 +654,34 @@
     <script src="{{ asset('js/contact-us.js') }}?t={{ env('VERSION_TIME') }}"></script>
     <script src="{{ asset('js/footer.js') }}?t={{ env('VERSION_TIME') }}"></script>
 </body>
+
+<script>
+// Function to handle the fade-in animation
+function handleFadeIn(entries, observer) {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateX(0)';
+        } else {
+            // Reset the animation when the element is not in the viewport
+            entry.target.style.opacity = 0;
+            entry.target.style.transform = 'translateX(-20px)';
+        }
+    });
+}
+
+// Create an Intersection Observer for all elements with class "content-container"
+const containers = document.querySelectorAll('.content-container');
+
+const observer = new IntersectionObserver(handleFadeIn, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5,
+});
+
+containers.forEach((container) => {
+    observer.observe(container);
+});
+
+</script>
 </html>
