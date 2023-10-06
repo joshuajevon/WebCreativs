@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="WebCreativs - Bersama-sama, mari wujudkan impian situs web Anda, katakan 'Ya' untuk desain luar biasa bersama kami!">
+    <meta name="keywords" content="software house, web development, custom web applications, web design, web development services, web development company, front-end development, back-end development, responsive web design, web developers">
+
     <title>WebCreativs</title>
 
     {{-- @vite('resources/css/app.css') --}}
@@ -121,7 +124,7 @@
 
     {{-- Hero --}}
     <div id="hero" class="pt-32 sm:pt-36 md:pt-40 lg:pt-44 xl:pt-40 pb-16 c-container bg-custom-off-white flex flex-col justify-center items-center gap-6 md:gap-10 xl:gap-14">
-        <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute bottom-[0rem] sm:-bottom-[4rem] md:-bottom-[12rem] lg:-bottom-[20rem] xl:-bottom-[28rem] 2xl:-bottom-[36rem] z-10">
+        <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute bottom-[0rem] sm:-bottom-[4rem] md:-bottom-[12rem] lg:-bottom-[20rem] xl:-bottom-[28rem] 2xl:-bottom-[36rem] z-10 pointer-events-none">
 
         <div class="flex md:gap-6 lg:gap-16 justify-center items-center z-20">
             <div class="hidden md:block">
@@ -441,7 +444,7 @@
 
     {{-- Latest Project --}}
     <div id="latest-project" class=" bg-custom-off-white flex flex-col justify-center items-center py-20 md:py-32 lg:py-48 pb-32 gap-8 sm:gap-10 md:gap-12 xl:gap-16 relative">
-        <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute -top-[50rem] z-10 rotate-180">
+        <img src="{{ asset('assets/about-us/background.svg') }}?t={{ env('VERSION_TIME') }}" alt="about-us-background" class="w-full absolute -top-[50rem] z-10 rotate-180 pointer-events-none">
 
         <div class="content-container  c-container z-20 flex flex-col justify-center items-center gap-5">
             <span class="relative content-container ">
