@@ -481,7 +481,7 @@
     {{-- Our Team --}}
     <div id="our-team" class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
         <span class="relative content-container ">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Tim Kami.</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Our Team.</h1>
             <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
         </span>
 
