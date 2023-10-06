@@ -1,8 +1,12 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WebCreativs</title>
+
+    </html>
     {{-- @vite('resources/css/app.css') --}}
     <link rel="stylesheet" href="{{ asset('css/build.css') }}?t={{ env('VERSION_TIME') }}">
 
@@ -474,7 +478,7 @@
     {{-- Our Team --}}
     <div id="our-team" class="c-container bg-custom-lightest-green/40 flex flex-col justify-center items-center py-32 gap-12 sm:gap-16 md:gap-20 xl:gap-24">
         <span class="relative content-container ">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Our Team.</h1>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold font-libre text-center leading-tight sm:leading-tight md:leading-tight lg:leading-tight xl:leading-tight 2xl:leading-tight text-custom-dark-gray">Tim Kami.</h1>
             <span id="nav-icon-bottom" class="w-3/4 h-[0.125rem] bg-custom-dark-green rounded-full absolute left-0 -bottom-2 mx-auto right-0"></span>
         </span>
 
@@ -486,13 +490,13 @@
                 <h2 class="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Christopher N. Tessy</h2>
                 <h2 class="font-semibold opacity-50 text-xs md:text-sm lg:text-base xl:text-lg">Front End Developer</h2>
                 <div class="flex justify-center items-center gap-4">
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/christopher-nathanael-tessy-b30339220/" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-linked-in.svg")}}" alt="linked-in" class="w-7">
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/christophertessy_/" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-instagram.svg")}}" alt="instagram" class="w-7">
                     </a>
-                    <a href="">
+                    <a href="mailto:christopher.nathanael1217@gmail.com" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-gmail.svg")}}" alt="gmail" class="w-8">
                     </a>
                 </div>
@@ -505,13 +509,13 @@
                 <h2 class="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Gamaliel Satria D.</h2>
                 <h2 class="font-semibold opacity-50 text-xs md:text-sm lg:text-base xl:text-lg">Project Manager</h2>
                 <div class="flex justify-center items-center gap-4">
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/gama-digdojo-7b231924b/" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-linked-in.svg")}}" alt="linked-in" class="w-7">
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/gama_digdojo/" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-instagram.svg")}}" alt="instagram" class="w-7">
                     </a>
-                    <a href="">
+                    <a href="mailto:gama_digdojo@gmail.com" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-gmail.svg")}}" alt="gmail" class="w-8">
                     </a>
                 </div>
@@ -524,13 +528,13 @@
                 <h2 class="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">Joshua Jevon I.</h2>
                 <h2 class="font-semibold opacity-50 text-xs md:text-sm lg:text-base xl:text-lg">Back End Developer</h2>
                 <div class="flex justify-center items-center gap-4">
-                    <a href="">
+                    <a href="https://www.linkedin.com/in/joshua-jevon-irawan/" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-linked-in.svg")}}" alt="linked-in" class="w-7">
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/joshua.jevon/" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-instagram.svg")}}" alt="instagram" class="w-7">
                     </a>
-                    <a href="">
+                    <a href="mailto:joshuajevon05@gmail.com" target="_blank" rel="nonoopener noreferrer">
                         <img src="{{asset("assets/our-team/icon-gmail.svg")}}" alt="gmail" class="w-8">
                     </a>
                 </div>
